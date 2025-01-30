@@ -1,0 +1,7 @@
+transformers
+gymnasium
+ale-py
+wandb
+gymnasium[other]
+matplotlib
+gymnasium[classic-control]
