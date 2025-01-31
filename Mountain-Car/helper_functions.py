@@ -1,10 +1,7 @@
-import gymnasium as gym
-from gymnasium.wrappers import AtariPreprocessing, RecordVideo
+import gymnasium as gym # type: ignore
+from gymnasium.wrappers import AtariPreprocessing, RecordVideo # type: ignore
 import os
 import torch as T
-from random import seed
-T.manual_seed(42)
-seed(42)
 
 
 def make_env(env_id: str, do_preprocessing: bool = False, make_video: bool = False):
@@ -38,7 +35,7 @@ def play_game(env_id, agent, strategy: str = 'argmax', temperature: float = 1):
     step = 0
     while not done:
         action = agent.action(state, strategy=strategy, temperature=temperature)
-        next_state, _, terminated, truncated, _ = env.step(int(action))
+        next_state, _, terminated, truncated, _ = env.step(float(action))
         next_state = T.tensor(next_state, dtype=T.float32)
         next_state = next_state.unsqueeze(0)
         done = terminated or truncated
@@ -51,4 +48,3 @@ def play_game(env_id, agent, strategy: str = 'argmax', temperature: float = 1):
     
     print(f"Steps {step}, result {result}")
     env.close()
-    return step

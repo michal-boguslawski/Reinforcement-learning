@@ -1,14 +1,11 @@
 from collections import deque
-from random import sample, choices, seed
+from random import sample, choices
 import torch as T
 import numpy as np
-T.manual_seed(42)
-seed(42)
-
 
 
 class Memory:
-    def __init__(self, maxlen: int = 10000, weight: float = 1, random_seed: int = 42):
+    def __init__(self, maxlen: int = 10000, weight: float = 0.9999):
         self.buffer = deque(maxlen=maxlen)
         self.priority = deque(maxlen=maxlen)
         self.weights = weight ** (maxlen - np.arange(maxlen) - 1)
@@ -25,4 +22,3 @@ class Memory:
         weights = np.array(list(self.priority)) * self.weights[-len(self.priority):]
         sample_list = choices(self.buffer, weights=weights, k=sample_size)
         return [agg_type(column, dim=0) for column in zip(*sample_list)]
-    

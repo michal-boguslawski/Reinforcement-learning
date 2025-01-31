@@ -1,6 +1,7 @@
-import torch as T # type: ignore
-import torch.nn as nn # type: ignore
-import torch.nn.functional as F # type: ignore
+import torch as T
+import torch.nn as nn
+import torch.nn.functional as F
+T.manual_seed(42)
 
 
 class CartPoleDqn(nn.Module):
@@ -12,16 +13,16 @@ class CartPoleDqn(nn.Module):
         self.init_norm = nn.Parameter(T.randn(n_observations, 2))
         self.weights = nn.Parameter(T.randn(n_observations, hidden_dim))
         self.hidden_dim = hidden_dim
+        self.mult = 2
         
         self.conv = nn.Sequential(
-            nn.Conv1d(hidden_dim, hidden_dim, 4),
+            nn.Conv1d(hidden_dim, hidden_dim * self.mult, 4),
             nn.Flatten(),
+            nn.LayerNorm(hidden_dim * self.mult),
             nn.GELU()
         )
-        # self.encoder = nn.TransformerEncoderLayer(hidden_dim, 4, 4 * hidden_dim)
-        
         self.model = nn.Sequential(
-            nn.Linear(hidden_dim, hidden_dim),
+            nn.Linear(hidden_dim * self.mult, hidden_dim),
             nn.LayerNorm(hidden_dim),
             nn.GELU(),
             nn.Linear(hidden_dim, n_actions)
@@ -39,8 +40,6 @@ class CartPoleDqn(nn.Module):
         x = x.view((-1, self.n_observations, self.hidden_dim))
         x = x.permute(0, 2, 1)
         x = self.conv(x)
-        # x = x[:, 0, :]
         logits = self.model(x)
         logits = logits.view(input_shape[:-1] + (-1, ))
         return logits
-    
