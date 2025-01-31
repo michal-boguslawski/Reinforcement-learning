@@ -2,9 +2,8 @@ import torch as T
 from models import CartPoleDqn
 from torch.distributions.categorical import Categorical
 from torch.optim import Adam
-from torch.optim.lr_scheduler import CosineAnnealingLR
-from torch.nn import HuberLoss
-T.manual_seed(42)
+from torch.optim.lr_scheduler import CosineAnnealingLR, CosineAnnealingWarmRestarts
+from torch.nn import MSELoss, HuberLoss
 
 
 def get_discounted_table(n, v):
@@ -13,73 +12,25 @@ def get_discounted_table(n, v):
     return tab.tril()
 
 
-class QAgent:
-    def __init__(self, n_observations:int = 4, n_actions: int = 2):
-        self.local_agent = CartPoleDqn(n_observations, n_actions)
-        self.target_agent = CartPoleDqn(n_observations, n_actions)
-        self.target_agent.load_state_dict(self.local_agent.state_dict())
-        self.tau_ = 0.005
-        self.gamma_ = 0.99
-        self.optimizer = Adam(self.local_agent.parameters(), lr=0.0002)
-        self.loss_fn = HuberLoss()
-        
-    def update_target_weights(self):
-        local_net_state_dict = self.local_agent.state_dict()
-        target_net_state_dict = self.target_agent.state_dict()
-        for key in local_net_state_dict:
-            target_net_state_dict[key] = local_net_state_dict[key]*self.tau_ + target_net_state_dict[key]*(1-self.tau_)
-        self.target_agent.load_state_dict(target_net_state_dict)
-        
-    def action(self, state, strategy: str = "softmax"):
-        with T.no_grad():
-            logits = self.local_agent(state)
-        if strategy == "softmax":
-            m = Categorical(logits=logits)
-            return m.sample()
-        elif strategy == 'argmax':
-            action = logits.argmax(-1)
-            return action
-        return 0
-    
-    def train(self, sample):
-        self.optimizer.zero_grad()
-        states, next_states, actions, rewards, terminateds = sample
-        actions = actions.unsqueeze(-1)
-        
-        with T.no_grad():
-            next_states_logits = self.target_agent(next_states)
-        next_states_values = next_states_logits.max(-1).values
-        
-        
-        logits = self.local_agent(states)
-        action_logits = logits.gather(dim=-1, index=actions)
-        terminateds = terminateds.to(T.float)
-        
-        target = rewards + self.gamma_ * next_states_values * (1 - terminateds)
-        target = target.unsqueeze(-1)
-        
-        loss = self.loss_fn(action_logits, target)
-        loss.backward()
-        T.nn.utils.clip_grad_value_(self.local_agent.parameters(), 10)
-        self.optimizer.step()
-        self.update_target_weights()
-        return loss.item()
-       
 class EligibilityQAgent:
     def __init__(self, n_observations:int = 4, n_actions: int = 2, timesteps: int = 5, hidden_dim: int = 64, device = 'cpu'):
-        self.tau_ = 0.01
-        self.lambda_ = 0.99
+        self.tau_ = 0.005 # best 0.01
+        self.lambda_ = 0.9
         self.gamma_ = 0.9
         self.local_agent = CartPoleDqn(
             n_observations, 
             n_actions, 
             hidden_dim, 
+            # init_weight=1/(1-self.gamma_)-10
             ).to(device)
         self.target_agent = CartPoleDqn(n_observations, n_actions, hidden_dim).to(device)
         self.target_agent.load_state_dict(self.local_agent.state_dict())
         self.device = device
-        self.optimizer = Adam(self.local_agent.parameters(), lr=0.0002, weight_decay=0.001)
-        self.scheduler = CosineAnnealingLR(self.optimizer, T_max=1000, eta_min=0.000001)
+        self.optimizer = Adam(self.local_agent.parameters(), lr=0.0002, weight_decay=0.01) # best lr=0.0002, weight_decay=0.001
+        
+        # lambda1 = lambda i: (int(i>1000) * 0.1 * 0.999 ** (i - 1000) + int(i<=1000))
+        # best self.scheduler = CosineAnnealingLR(self.optimizer, T_max=10000, eta_min=0.000001)
+        self.scheduler = CosineAnnealingWarmRestarts(self.optimizer, T_0=10000, T_mult=2, eta_min=0.000001)
         self.loss_fn = HuberLoss()
         self.discounted_table = get_discounted_table(timesteps, self.gamma_ * self.lambda_).to(device)
         self.upper_triangle = T.ones(timesteps, timesteps).triu().to(device)
@@ -154,6 +105,7 @@ class EligibilityQAgent:
         loss.backward()
         T.nn.utils.clip_grad_value_(self.local_agent.parameters(), 10)
         self.optimizer.step()
+        self.step_scheduler()
         
         self.update_target_weights()
         return loss.item() 

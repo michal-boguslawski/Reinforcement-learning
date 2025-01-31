@@ -1,17 +1,12 @@
-import torch as T
-from random import seed
-T.manual_seed(42)
-seed(42)
-
 from worker import WorkerNStep
+import torch as T
 
 if __name__ == "__main__":
     device = T.device('cuda' if T.cuda.is_available() else 'cpu')
     worker = WorkerNStep(
-        env_id="CartPole-v1", 
-        batch_size=256,
+        env_id="MountainCarContinuous-v0", 
+        batch_size=128,
         timesteps=20, 
         device=device
         )
-    worker.train(episodes=1000)
-    
+    worker.train(episodes=800)
