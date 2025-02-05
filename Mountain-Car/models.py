@@ -11,11 +11,11 @@ class MountainCarModel(nn.Module):
             nn.Linear(input_dim, hidden_dim),
             nn.LayerNorm(hidden_dim),
             nn.GELU(),
+            nn.Linear(hidden_dim, hidden_dim),
+            nn.LayerNorm(hidden_dim),
+            nn.GELU(),
         )
-        self.action_mean = nn.Sequential(
-            nn.Linear(hidden_dim, output_dim),
-            nn.Tanh()
-        )
+        self.action_mean = nn.Linear(hidden_dim, output_dim)
         self.action_std = nn.Sequential(
             nn.Linear(hidden_dim, output_dim),
             nn.Softplus()
@@ -25,8 +25,9 @@ class MountainCarModel(nn.Module):
         
     def forward(self, input):
         x = self.norm * input
+        x = self.layer(x)
         action_mean = self.action_mean(x)
         action_std = self.action_std(x)
         value = self.value(x)
-        return action_mean, action_std, value
+        return action_mean, action_std.clamp(min=0.1), value
     

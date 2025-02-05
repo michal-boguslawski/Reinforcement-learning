@@ -1,0 +1,8 @@
+transformers==4.48.0
+gymnasium==1.0.0
+ale-py==0.10.1
+wandb==0.19.4
+gymnasium[other]
+matplotlib==3.10.0
+gymnasium[classic-control]
+swig==4.3.0
