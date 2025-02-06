@@ -14,9 +14,8 @@ def get_discounted_table(n, v):
        
 class ACAgent:
     def __init__(self, input_dim: int = 2, output_dim: int = 1, timesteps: int = 5, hidden_dim: int = 64, device = 'cpu'):
-        self.tau_ = 0.005 # best 0.01
         self.lambda_ = 0.9
-        self.gamma_ = 0.99
+        self.gamma_ = 0.95
         self.agent = MountainCarModel(
             input_dim, 
             output_dim, 
@@ -32,23 +31,28 @@ class ACAgent:
         state = state.to(self.device)
         action_mean, action_std, state_value = self.agent(state)
         dist = Normal(action_mean, 
-                      max(action_std * temperature, min_std)
+                      (action_std * temperature).clip(min=min_std)
                       )
         action = dist.rsample() #rsample for gradients
         log_prob = dist.log_prob(action)
         entropy = dist.entropy()
         return T.tanh(action), log_prob, state_value, entropy
     
-    def train(self, sample, entropy_reg):
-        state_values, entropy, log_probs, rewards, dones = [x for x in sample]
-    
-        next_state_values = state_values[1:].clone().detach().squeeze()
-        state_values = state_values[:-1].squeeze()
+    def train(self, sample, entropy_reg, ICM):
+        states, state_values, actions, entropy, log_probs, rewards, dones = sample
         
-        dones = dones[:-1].to(T.float)
-        entropy = entropy[:-1].squeeze()
-        log_probs = log_probs[:-1].squeeze()
-        rewards = rewards[:-1]
+        next_states = states[:, 1:].clone().detach().squeeze(-1)
+        states = states[:, :-1].detach().squeeze(-1)
+        actions = actions[:, :-1]
+        intrinsic_reward, L_I, L_F = ICM.calc_loss(states, next_states, actions)
+    
+        next_state_values = state_values[:, 1:].clone().detach().squeeze(-1)
+        state_values = state_values[:, :-1].squeeze(-1)
+        
+        dones = dones[:, :-1].to(T.float)
+        entropy = entropy[:, :-1].squeeze(-1)
+        log_probs = log_probs[:, :-1].squeeze(-1)
+        rewards = rewards[:, :-1] + 100. * intrinsic_reward
         following_dones = T.matmul(dones, self.upper_triangle)
         
         td_errors = rewards + self.gamma_ * next_state_values * (1 - dones) - state_values
@@ -56,7 +60,7 @@ class ACAgent:
         
         discounted_td_errors = T.matmul(td_errors, self.discounted_table)
         
-        policy_loss = - (discounted_td_errors.detach() * log_probs)
+        policy_loss = - (td_errors.detach() * log_probs)
         
         # critic_loss = T.where(discounted_td_errors.abs() > 1, discounted_td_errors.pow(2), discounted_td_errors.abs())
         critic_loss = self.loss_fn(discounted_td_errors, T.zeros_like(discounted_td_errors))
@@ -64,7 +68,4 @@ class ACAgent:
         
         loss = policy_loss + 0.5 * critic_loss - entropy_reg * entropy
         loss = loss.mean()
-        return loss, policy_loss.mean(), critic_loss.mean(), entropy.mean()
-    
-    def step_scheduler(self):
-        self.scheduler.step()
+        return (loss, policy_loss.mean(), critic_loss.mean(), entropy.mean()), L_I, L_F
