@@ -1,7 +1,8 @@
-transformers
-gymnasium
-ale-py
-wandb
+transformers==4.48.1
+gymnasium==1.0.0
+ale-py==0.10.1
+wandb==0.19.5
 gymnasium[other]
-matplotlib
+matplotlib==3.10.0
 gymnasium[classic-control]
+mujoco==3.2.7
