@@ -49,17 +49,18 @@ class Agent:
         self.model_old.load_state_dict(self.model.state_dict())
         
     def action(self, state, hx):
-        action_mean, action_std, _, hx_out = self.model_old(state, hx)
+        with T.no_grad():
+            action_mean, action_std, _, hx_out = self.model_old(state, hx)
         if self.distribution == "normal":
-            dist = MultivariateNormal(action_mean, action_std.clamp(min=0) + 1e-6)
+            dist = MultivariateNormal(action_mean, action_std + 1e-6)
         
-        action = dist.rsample()
+        action = dist.sample()
         log_prob = dist.log_prob(action)
-        return action.detach(), log_prob.detach(), hx_out.detach()
+        return action, log_prob, hx_out
     
     def get_errors(self, rewards, state_values, dones, following_dones):
-        next_state_values = state_values[1:].clone().detach()
-        state_values = state_values[:-1]
+        next_state_values = state_values[:, 1:].clone().detach()
+        state_values = state_values[:, :-1]
         td_errors = rewards + self.gamma_ * next_state_values * (1 - dones) - state_values
         td_errors = td_errors * (1 - following_dones + dones)
         
@@ -69,24 +70,25 @@ class Agent:
         
     def train_main(self, states, hxs, actions, old_log_probs, rewards, dones):
         action_mean, action_std, state_values, _ = self.model(states, hxs)
-        action_mean = action_mean[:-1]
-        action_std = action_std.unsqueeze(0).expand(len(action_mean), -1, -1)
+        action_mean = action_mean[:, :-1]
+        action_std = action_std[:, :-1]
+        state_values = state_values.squeeze(-1)
         dist = MultivariateNormal(action_mean, action_std.clamp(min=0) + 1e-6)
         log_probs = dist.log_prob(actions)
-        entropys = dist.entropy().sum(-1)
+        entropys = dist.entropy()
         
         following_dones = T.matmul(dones, self.upper_triangle)
         discounted_td_errors = self.get_errors(rewards, state_values, dones, following_dones)
         
         r_t = T.exp(log_probs - old_log_probs)
-        surr1 = discounted_td_errors.detach() * r_t.sum(-1)
-        surr2 = discounted_td_errors.detach() * r_t.clamp(min=1-self.epsilon_, max=1+self.epsilon_).sum(-1)
+        surr1 = discounted_td_errors.detach() * r_t
+        surr2 = discounted_td_errors.detach() * r_t.clamp(min=1-self.epsilon_, max=1+self.epsilon_)
         
-        policy_loss = - T.minimum(surr1, surr2) # + 0.5 * F.kl_div(log_probs, old_log_probs, reduction='none', log_target=True).sum(-1)
+        policy_loss = - T.minimum(surr1, surr2) # + 0.5 * F.kl_div(log_probs, old_log_probs, reduction='none', log_target=True)
         
         critic_loss = self.loss_fn(discounted_td_errors, T.zeros_like(discounted_td_errors))
         
-        loss = policy_loss + 0.5 * critic_loss - 0.01 * entropys
+        loss = policy_loss + 0.5 * critic_loss - 0.001 * entropys
         loss = loss.clamp(min=-1000, max=1000)
         loss = loss.mean()
         self.optimizer.zero_grad()
@@ -103,18 +105,18 @@ class Agent:
         losses = []
         
         actions, states, old_log_probs, hxs, rewards, dones = batch
-        dones = dones[:-1].to(T.float).squeeze(-1)
-        actions = actions[:-1]
-        old_log_probs = old_log_probs[:-1]
+        dones = dones[:, :-1].to(T.float).squeeze(-1)
+        actions = actions[:, :-1]
+        old_log_probs = old_log_probs[:, :-1]
         # hxs = hxs[:-1]
-        rewards = rewards[:-1].squeeze(-1)
-        # mean_rewards = rewards.mean()
-        # std_rewards = rewards.std()
-        # standardized_rewards = (rewards - mean_rewards)/std_rewards
+        rewards = rewards[:, :-1].squeeze(-1)
+        mean_rewards = rewards.mean()
+        std_rewards = rewards.std()
+        standardized_rewards = (rewards - mean_rewards)/std_rewards
         
         
         for _ in range(ppo_epochs):
-            loss, old_log_probs_ = self.train_main(states, hxs, actions, old_log_probs, rewards, dones)
+            loss, old_log_probs_ = self.train_main(states, hxs, actions, old_log_probs, standardized_rewards, dones)
             losses.append(loss)
         self.update_model_old()
         return losses

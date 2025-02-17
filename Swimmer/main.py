@@ -7,9 +7,9 @@ if __name__ == "__main__":
     os.environ["MUJOCO_GL"] = "egl" if T.cuda.is_available() else 'osmesa'
     worker = Worker(
         env_id="Swimmer-v5",
-        input_dim=8,
-        hidden_dim=16,
-        timesteps=256, 
+        num_envs=32,
+        hidden_dim=32,
+        timesteps=32, 
         max_steps=int(1e8),
         learning_rate=0.0002,
         device=device

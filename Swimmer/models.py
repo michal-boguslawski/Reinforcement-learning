@@ -14,6 +14,10 @@ class SwimmerModel(nn.Module):
             nn.Linear(input_dim, hidden_dim),
             nn.ReLU()
         )
+        self.fc2 = nn.Sequential(
+            nn.Linear(input_dim, hidden_dim),
+            nn.Softplus()
+        )
         self.gru = nn.Sequential(
             nn.Linear(hidden_dim, hidden_dim),
             nn.ReLU(),
@@ -22,7 +26,7 @@ class SwimmerModel(nn.Module):
         layers = []
         for i in range(num_layers):
             if i == 0:
-                factor = 2
+                factor = 3
             else:
                 factor = 1
             layers.append(nn.Linear(hidden_dim * factor, hidden_dim))
@@ -33,12 +37,16 @@ class SwimmerModel(nn.Module):
         self.log_std = nn.Parameter(T.ones(output_dim))
         
     def forward(self, input, hx):
-        x = self.fc1(input)
+        x1 = self.fc1(input)
+        x2 = self.fc2(input)
+        hx = hx.view(-1, self.hidden_dim)
         hx_out = self.gru(hx)
-        x = T.cat([x, hx_out], dim=-1)
+        hx_out = hx_out.view(len(input), -1, self.hidden_dim).squeeze(1)
+        x = T.cat([x1, x2, hx_out], dim=-1)
         x = self.fcs(x)
         mean = self.mean_layer(x)
-        std = T.diag_embed(T.exp(self.log_std))
+        std = T.exp(self.log_std).expand_as(mean)
+        std = T.diag_embed(std)
         value = self.value_layer(x)
         return mean, std, value, hx_out
     
