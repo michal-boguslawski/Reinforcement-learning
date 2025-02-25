@@ -40,3 +40,11 @@ def reshape_reward(reward, action, velocity, next_position, position):
 
 ### Example of an episode
 [![Watch the video](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Mountain-Car/Mountain-Car-example.gif)](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Mountain-Car/Mountain-Car-example.mp4)
+
+## Swimmer
+### Problem Description
+Model used: PPO with multiple environments simple MLP.
+Result over 50 tries: 361.6 +- 1.32
+
+### Example of an episode
+![Watch the video](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Swimmer/Swimmer-example.mp4)
