@@ -40,3 +40,12 @@ def reshape_reward(reward, action, velocity, next_position, position):
 
 ### Example of an episode
 [![Watch the video](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Mountain-Car/Mountain-Car-example.gif)](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Mountain-Car/Mountain-Car-example.mp4)
+
+
+## Mountain Car PP0
+### Problem Description
+Model used: Simple PPO with reshaped rewards
+Result: 93.35 +- 1.17
+
+### Example of an episode
+![Watch the video](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Mountain-Car-PPO/Mountain-Car-example.mp4)
