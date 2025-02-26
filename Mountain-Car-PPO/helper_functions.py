@@ -45,20 +45,25 @@ def play_game(env_id: str, agent: T.nn.Module, num_games: int, name_prefix: str 
     total_rewards = T.zeros(1)
     state, _ = env.reset()
     list_rewards = []
+    hx = T.zeros(1, agent.policy.gru_dims, device=device)
     
     while games < num_games:
         
         with T.no_grad():
-            output = agent.select_action(state, temperature=0.01)
+            output = agent.select_action(state, hx, temperature=0.01)
         action = output['action']
+        hx = output['hx']
         state, reward, terminated, truncated, _ = env.step(action)        
         
         total_rewards += reward.cpu()
         done = T.logical_or(terminated, truncated)
         if done:
+            hx[done] = 0
             list_rewards.append(total_rewards)
             total_rewards = T.zeros(1)
             games += 1
     env.close()
+    if make_video:
+        print('Video saved')
     print(state[0], action)
     return np.mean(list_rewards), np.std(list_rewards)
