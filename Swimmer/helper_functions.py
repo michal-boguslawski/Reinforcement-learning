@@ -5,6 +5,7 @@ from gymnasium.wrappers.vector import DtypeObservation, NumpyToTorch, TransformR
 import torch as T
 import os
 import numpy as np
+from collections import deque
 
 
 def change_reward_type(rew):
@@ -32,7 +33,14 @@ def make_env(env_id: str, num_envs: int = 2, dtype: T.dtype = np.float32, device
     envs = TransformReward(envs, func=change_reward_type)
     return envs
 
-def play_game(env_id: str, agent: T.nn.Module, num_games: int, name_prefix: str | None = None, device: T.device = T.device('cpu'), make_video: bool = False) -> T.Tensor:
+def play_game(env_id: str, 
+              agent: T.nn.Module, 
+              num_games: int, 
+              name_prefix: str | None = None, 
+              if_rnn: bool = False,
+              backstep: int | None = None,
+              device: T.device = T.device('cpu'), 
+              make_video: bool = False) -> T.Tensor:
     if make_video:
         if name_prefix is None:
             name_prefix = env_id
@@ -46,15 +54,33 @@ def play_game(env_id: str, agent: T.nn.Module, num_games: int, name_prefix: str 
     state, _ = env.reset()
     list_rewards = []
     
+    if if_rnn:
+        state_temp_memory = deque(maxlen=backstep)
+        action_dim = agent.num_actions
+        prev_action = T.zeros(1, action_dim, device=device)
+        for i in range(backstep):
+            if i == backstep - 1:
+                done = T.ones(1, 1, device=device)
+            else:
+                done = T.zeros(1, 1, device=device)
+            state_temp_memory.append(T.cat([state, prev_action, done], dim=-1))
+    
     while games < num_games:
-        
+        if if_rnn:
+            stacked_state = T.stack(list(state_temp_memory), dim=-2).to(device)
+            state_to_current = stacked_state
+        else:
+            state_to_current = state
         with T.no_grad():
-            output = agent.select_action(state, temperature=0.01)
+            output = agent.select_action(state_to_current, temperature=0.01)
         action = output['action']
-        state, reward, terminated, truncated, _ = env.step(action)        
-        
+        action = action.clamp(min=-1, max=1)
+        state, reward, terminated, truncated, _ = env.step(action)     
+        done = T.logical_or(terminated, truncated)   
+        if if_rnn:
+            state = T.cat([state, action, done.unsqueeze(-1)], dim=-1)
+            state_temp_memory.append(state)
         total_rewards += reward.cpu()
-        done = T.logical_or(terminated, truncated)
         if done:
             list_rewards.append(total_rewards)
             total_rewards = T.zeros(1)
