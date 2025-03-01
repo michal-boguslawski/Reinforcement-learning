@@ -23,10 +23,10 @@ def reshape_reward(reward, state, next_state, action, factor):
 device = T.device('cuda' if T.cuda.is_available() else 'cpu')
 os.environ["MUJOCO_GL"] = "egl" if T.cuda.is_available() else 'osmesa'
 env_id = 'Swimmer-v5'
-num_envs = 16
+num_envs = 4
 envs = make_env(env_id, num_envs=num_envs, device=device)
 
-memory_timesteps = 1024
+memory_timesteps = 4096
 train_timesteps = 256
 ppo_epochs = 10
 max_timesteps = int(1e6)
@@ -46,10 +46,10 @@ ac_model = PPO(num_actions=action_dim,
                gru_dims=gru_dims, 
                if_rnn=if_rnn, 
                final_activation=nn.Tanh(), 
-               lr=0.001,
+               lr=0.0003,
                backstep=backstep,
                device=device)
-memory = Memory(memory_timesteps)
+memory = Memory(maxlen=memory_timesteps, backstep=backstep)
 if if_rnn:
     state_temp_memory = deque(maxlen=backstep)
 
@@ -61,7 +61,10 @@ if if_rnn:
             done = T.ones(num_envs, 1, device=device)
         else:
             done = T.zeros(num_envs, 1, device=device)
-        state_temp_memory.append(T.cat([state, prev_action, done], dim=-1))
+        state_to_memory = T.cat([state, prev_action, done], dim=-1)
+        state_temp_memory.append(state_to_memory)
+        memory.push(state=state_to_memory)
+        
 
 step = 0
 total_rewards = 0
@@ -81,13 +84,14 @@ while step <= max_timesteps:
     next_state, reward, terminated, truncated, _ = envs.step(action)
     reward_to_model = reshape_reward(reward, state, next_state, action, factor ** 2)
     done = T.logical_or(terminated, truncated)
+    
+    item = (action, output['logprob'], output['value'], reward_to_model, terminated, truncated)
+    memory.push(state=state_to_memory, item=item)
+    
     state = next_state
     if if_rnn:
         state_to_memory = T.cat([state, action, done.unsqueeze(-1)], dim=-1)
         state_temp_memory.append(state_to_memory)
-    
-    item = (action, state_to_current, output['logprob'], output['value'], reward_to_model, terminated, truncated)
-    memory.push(item)
     
     total_rewards += reward
     if done.any():
@@ -103,7 +107,7 @@ while step <= max_timesteps:
     if step % train_timesteps == 0 and step > 0:
         batch = memory.get(agg_type=T.stack, length=train_timesteps)
         
-        ac_model.update(batch, ppo_epochs=ppo_epochs, factor=factor)
+        ac_model.update(batch, ppo_epochs=ppo_epochs, backstep=backstep, factor=factor)
 
         ac_model.save_model()
         
@@ -112,7 +116,8 @@ while step <= max_timesteps:
         num_games = np.sum(list_num_games[-100:])
         wins = np.sum(list_wins[-100:])
         print(f"Steps {step}, mean rewards {sum_rewards/num_games:.2f}, mean wins {wins/num_games:.4f}, over games {num_games} "
-              f"lr {ac_model.scheduler.get_last_lr()[0]:.6f}, factor {factor:.4f}, std ")
+              # f"lr {ac_model.scheduler.get_last_lr()[0]:.6f}, "
+              f"factor {factor:.4f}, std ")
         print({output['cov_matrix'].mean(0).cpu()})
     
     if step % save_video_step == 0:
@@ -125,10 +130,9 @@ while step <= max_timesteps:
                                 name_prefix=env_id + f"_{step//save_video_step}", 
                                 make_video=True)
         print(temp_result)
-        
-    if factor < 0.5:
+    
+    if temp_result[0] > 350:
         train_timesteps = memory_timesteps
-        ppo_epochs = 20
     
     step += 1
     
