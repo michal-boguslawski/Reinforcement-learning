@@ -44,7 +44,7 @@ def reshape_reward(reward, action, velocity, next_position, position):
 
 ## Mountain Car PP0
 ### Problem Description
-Model used: Simple PPO with reshaped rewards \n
+Model used: Simple PPO with reshaped rewards
 Result: 97.3 +- 0.7
 
 ### Example of an episode
@@ -52,9 +52,9 @@ Result: 97.3 +- 0.7
 
 ## Swimmer
 ### Problem Description
-Model used: PPO with multiple environments. \n
-Result over 50 tries, without recurrent network: 361.6 +- 1.32 \n
-with recurrent network: 359.1 +- 2.97 \n
+Model used: PPO with multiple environments.
+Result over 50 tries, without recurrent network: 361.6 +- 1.32
+with recurrent network: 359.1 +- 2.97
 
 ### Example of an episode
 ![Watch the video](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Swimmer/Swimmer-example.mp4)
