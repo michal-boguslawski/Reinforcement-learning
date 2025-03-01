@@ -6,6 +6,13 @@ from torch.optim.lr_scheduler import CosineAnnealingLR
 from torch.nn import HuberLoss
 import os
 
+def create_disc_table(batch_size, timesteps, v):
+    disc_table = T.arange(timesteps).unsqueeze(1) - T.arange(timesteps)
+    disc_table = v ** disc_table
+    disc_table = disc_table.tril()
+    disc_table = disc_table.unsqueeze(0).expand(batch_size, -1, -1)
+    return disc_table
+
 class GRUExtractor(nn.Module):
     def __init__(self, input_dim, gru_dims, activation: nn.Module = nn.Tanh):
         super(GRUExtractor, self).__init__()
@@ -145,7 +152,8 @@ class PPO:
                                   num_layers=num_layers, 
                                   final_activation=final_activation).to(device)
         self.optimizer = Adam(self.policy.parameters(), lr=lr, weight_decay=0.)
-        self.scheduler = CosineAnnealingLR(self.optimizer, T_max=20000, eta_min=1e-8)
+        # self.scheduler = CosineAnnealingLR(self.optimizer, T_max=20000, eta_min=1e-8)
+        self.device = device
         self.gamma_ = gamma_
         self.lambda_ = lambda_
         self.backstep = backstep
@@ -163,32 +171,37 @@ class PPO:
         return self.policy.select_action(input, temperature)
     
     def compute_advantage_and_results(self, reward, value, terminated, truncated):
-        _, timesteps = value.shape
-        advantage = T.zeros_like(reward[:, :-1])
-        last_gae = 0
+        batch_size, timesteps = reward.shape
+        not_terminated = T.logical_not(terminated)
+        not_truncated = T.logical_not(truncated)
         
-        # to optimize
+        delta = reward + self.gamma_ * not_terminated * not_truncated * value[:, 1:] +\
+            self.gamma_ * truncated * value[:, :-1] -\
+                value[:, :-1]
         
-        for step in reversed(range(timesteps-1)):
-            next_terminated_step = T.logical_not(terminated[:, step])
-            truncated_step = truncated[:, step]
-            next_truncated_step = T.logical_not(truncated_step.clone())
-            delta = reward[:, step] + \
-                self.gamma_ * next_terminated_step * next_truncated_step * value[:, step+1] +\
-                    self.gamma_ * truncated_step * value[:, step] - \
-                        value[:, step]
-            last_gae = delta + last_gae * next_terminated_step * next_truncated_step * self.gamma_ * self.lambda_
-            advantage[:, step] = last_gae
+        dones = T.logical_or(terminated, truncated)
+        done_indices = T.nonzero(dones)
+        disc_table = create_disc_table(batch_size, timesteps, self.gamma_ * self.lambda_).to(self.device)
+        for i, idx in done_indices:
+            disc_table[i, (idx+1):, :(idx+1)] = 0
             
+        advantage = T.einsum('ni, nij -> nj', delta, disc_table)
+        
         result = advantage + value[:, :-1]
         return advantage, result
             
     
-    def update(self, sample, ppo_epochs: int = 10, factor: float = 1.):
-        action, state, old_logprob, old_value, reward, terminated, truncated = sample
+    def update(self, sample, ppo_epochs: int = 10, backstep: int = 0, factor: float = 1.):
+        action, old_logprob, old_value, reward, terminated, truncated, state = sample
         action = action[:, :-1]
         old_logprob = old_logprob[:, :-1]
         state = state[:, :-1]
+        reward = reward[:, :-1]
+        terminated = terminated[:, :-1]
+        truncated = truncated[:, :-1]
+        if backstep > 1:
+            state = state.unfold(1, backstep, 1)
+            state = state.transpose(-1, -2)
         
         advantage, result = self.compute_advantage_and_results(reward=reward, value=old_value, terminated=terminated, truncated=truncated)
         
@@ -200,5 +213,5 @@ class PPO:
             loss.backward()
             T.nn.utils.clip_grad_norm_(self.policy.parameters(), max_norm=5)
             self.optimizer.step()
-            self.scheduler.step()
+            # self.scheduler.step()
         
