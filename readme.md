@@ -5,7 +5,7 @@
 Model used: DQN
 
 ## Example of an episode
-[![Watch the video](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Cart-Pole/CartPoleGame.gif)](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Cart-Pole/Cart-Pole-example.mp4)
+[![Watch the video](Cart-Pole/CartPoleGame.gif)](Cart-Pole/Cart-Pole-example.mp4)
 
 
 ## Mountain Car
@@ -39,7 +39,7 @@ def reshape_reward(reward, action, velocity, next_position, position):
     return reward + side_reward
 
 ### Example of an episode
-[![Watch the video](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Mountain-Car/Mountain-Car-example.gif)](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Mountain-Car/Mountain-Car-example.mp4)
+[![Watch the video](Mountain-Car/Mountain-Car-example.gif)](Mountain-Car/Mountain-Car-example.mp4)
 
 
 ## Mountain Car PP0
@@ -48,7 +48,7 @@ Model used: Simple PPO with reshaped rewards
 Result: 97.3 +- 0.7
 
 ### Example of an episode
-![Watch the video](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Mountain-Car-PPO/Mountain-Car-example.mp4)
+![Watch the video](Mountain-Car-PPO/Mountain-Car-example.mp4)
 
 ## Swimmer
 ### Problem Description
@@ -57,4 +57,21 @@ Result over 50 tries, without recurrent network: 361.6 +- 1.32
 with recurrent network: 359.1 +- 2.97
 
 ### Example of an episode
-![Watch the video](https://dagshub.com/boguslawski.m.j/Reinforcement-learning/src/main/Swimmer/Swimmer-example.mp4)
+![Watch the video](Swimmer/Swimmer-example.mp4)
+
+## HalfCheetah
+### Problem Description
+Model used: PPO with multiple environments.
+Result over 50 tries, without recurrent network: 6210.86 +- 391.26
+
+### Example of an episode
+![Watch the video](HalfCheetah/HalfCheetah-example.mp4)
+
+## Ant
+### Problem Description
+Model used: PPO with multiple environments.
+Result over 50 tries, without recurrent network: 4247.51 +- 1766.83
+To further hyperoptimization
+
+### Example of an episode
+![Watch the video](Ant/Ant-example.mp4)
