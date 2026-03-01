@@ -16,6 +16,19 @@ The goal of this project is to:
 - Evaluate performance across different environments
 - Visualize training progress and inference behavior
 
+## My Contributions
+- Implemented PPO, A2C, and Sarsa from scratch using object-oriented design
+- Built the complete RL infrastructure: memory buffers, training loops, evaluation pipelines
+- Designed flexible environment wrappers for reward shaping and observation modifications
+- Added TensorBoard metrics tracking and automated inference video recording
+
+## Skills and Technologies
+- Reinforcement Learning: On-policy algorithms (PPO, A2C, Sarsa)
+- Python: NumPy, PyTorch
+- RL Tools: Gymnasium, TensorBoard
+- Software Engineering: Object-oriented programming, modular design, experiment tracking
+- Visualization: Matplotlib, Seaborn, GIF/video recording
+
 ## Table of Content
 - [Implemented Algorithms](#implemented-algorithms)
 - [Environments](#environments)
@@ -179,6 +192,7 @@ In this project, policies and the entire supporting infrastructure—including m
 - TensorBoard metrics tracking for visualizing training progress
 - Configurable policies for flexible experimentation
 - Configurable environments to easily switch tasks
+- Added logging ability
 - Environment wrappers for reward shaping and observation modifications
 - Periodic inference recording: agent behavior is saved as video at configurable intervals, making it easy to track training progress visually
 - And more
