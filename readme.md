@@ -151,55 +151,27 @@ All training logs are available through tensorboard. The path to an example of t
 | ⭐ PPO | Swimmer | 353.44 | 1.16 | 1000 | v3 |
 
 ## Inference Examples
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/Acrobot/first.gif" alt="Acrobot before training" style="height: 100%;">
-  </div>
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/Acrobot/last.gif" alt="Acrobot after training" style="height: 100%;">
-  </div>
-
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/BipedalWalker/first.gif" alt="BipedalWalker before training" style="height: 100%;">
-  </div>
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/BipedalWalker/last.gif" alt="BipedalWalker after training" style="height: 100%;">
-  </div>
-
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/CarRacing/first.gif" alt="CarRacing before training" style="height: 100%;">
-  </div>
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/CarRacing/last.gif" alt="CarRacing after training" style="height: 100%;">
-  </div>
-
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/CartPole/first.gif" alt="CartPole before training" style="height: 100%;">
-  </div>
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/CartPole/last.gif" alt="CartPole after training" style="height: 100%;">
-  </div>
-
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/LunarLander/first.gif" alt="LunarLander before training" style="height: 100%;">
-  </div>
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/LunarLander/last.gif" alt="LunarLander after training" style="height: 100%;">
-  </div>
-
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/MountainCar/first.gif" alt="MountainCar before training" style="height: 100%;">
-  </div>
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/MountainCar/last.gif" alt="MountainCar after training" style="height: 100%;">
-  </div>
-
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/Swimmer/first.gif" alt="Swimmer before training" style="height: 100%;">
-  </div>
-  <div style="flex: 1 1 100px; max-height: 100px;">
-    <img src="images/Swimmer/last.gif" alt="Swimmer after training" style="height: 100%;">
-  </div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start;">
+  <img src="images/Acrobot/first.gif" alt="Acrobot before training" height="100" />
+  <img src="images/Acrobot/last.gif" alt="Acrobot after training" height="100" />
+  
+  <img src="images/BipedalWalker/first.gif" alt="BipedalWalker before training" height="100" />
+  <img src="images/BipedalWalker/last.gif" alt="BipedalWalker after training" height="100" />
+  
+  <img src="images/CarRacing/first.gif" alt="CarRacing before training" height="100" />
+  <img src="images/CarRacing/last.gif" alt="CarRacing after training" height="100" />
+  
+  <img src="images/CartPole/first.gif" alt="CartPole before training" height="100" />
+  <img src="images/CartPole/last.gif" alt="CartPole after training" height="100" />
+  
+  <img src="images/LunarLander/first.gif" alt="LunarLander before training" height="100" />
+  <img src="images/LunarLander/last.gif" alt="LunarLander after training" height="100" />
+  
+  <img src="images/MountainCar/first.gif" alt="MountainCar before training" height="100" />
+  <img src="images/MountainCar/last.gif" alt="MountainCar after training" height="100" />
+  
+  <img src="images/Swimmer/first.gif" alt="Swimmer before training" height="100" />
+  <img src="images/Swimmer/last.gif" alt="Swimmer after training" height="100" />
 </div>
 
 ## Key implementations
