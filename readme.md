@@ -1,9 +1,9 @@
 # Multi-Agent On-Policy Reinforcement Learning with Gymnasium
 Training multiple on-policy agents to solve reinforcement learning environments from the Gymnasium ecosystem.
 
-<img src="images/BipedalWalker/last.gif" alt="BipedalWalker after training" height="300"/>
-<img src="images/CarRacing/last.gif" alt="CarRacing after training" height="300"/>
-<img src="images/Swimmer/last.gif" alt="Swimmer after training" height="300"/>
+<img src="images/BipedalWalker/last.gif" alt="BipedalWalker after training" height="100"/>
+<img src="images/CarRacing/last.gif" alt="CarRacing after training" height="100"/>
+<img src="images/Swimmer/last.gif" alt="Swimmer after training" height="100"/>
 
 ## Overview
 This project implements and evaluates multiple on-policy reinforcement learning agents trained on environments from the Gymnasium package.
@@ -150,52 +150,52 @@ All training logs are available through tensorboard. The path to an example of t
 
 ## Inference Examples
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/Acrobot/first.gif" alt="Acrobot before training" style="height: 100%;">
   </div>
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/Acrobot/last.gif" alt="Acrobot after training" style="height: 100%;">
   </div>
 
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/BipedalWalker/first.gif" alt="BipedalWalker before training" style="height: 100%;">
   </div>
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/BipedalWalker/last.gif" alt="BipedalWalker after training" style="height: 100%;">
   </div>
 
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/CarRacing/first.gif" alt="CarRacing before training" style="height: 100%;">
   </div>
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/CarRacing/last.gif" alt="CarRacing after training" style="height: 100%;">
   </div>
 
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/CartPole/first.gif" alt="CartPole before training" style="height: 100%;">
   </div>
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/CartPole/last.gif" alt="CartPole after training" style="height: 100%;">
   </div>
 
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/LunarLander/first.gif" alt="LunarLander before training" style="height: 100%;">
   </div>
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/LunarLander/last.gif" alt="LunarLander after training" style="height: 100%;">
   </div>
 
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/MountainCar/first.gif" alt="MountainCar before training" style="height: 100%;">
   </div>
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/MountainCar/last.gif" alt="MountainCar after training" style="height: 100%;">
   </div>
 
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/Swimmer/first.gif" alt="Swimmer before training" style="height: 100%;">
   </div>
-  <div style="flex: 1 1 200px; max-height: 200px;">
+  <div style="flex: 1 1 100px; max-height: 100px;">
     <img src="images/Swimmer/last.gif" alt="Swimmer after training" style="height: 100%;">
   </div>
 </div>
