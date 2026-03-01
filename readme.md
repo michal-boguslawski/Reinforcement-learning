@@ -1,9 +1,11 @@
 # Multi-Agent On-Policy Reinforcement Learning with Gymnasium
 Training multiple on-policy agents to solve reinforcement learning environments from the Gymnasium ecosystem.
 
-<img src="images/BipedalWalker/last.gif" alt="BipedalWalker after training" height="100"/>
-<img src="images/CarRacing/last.gif" alt="CarRacing after training" height="100"/>
-<img src="images/Swimmer/last.gif" alt="Swimmer after training" height="100"/>
+<div style="display: flex; gap: 10px; align-items: center;">
+  <img src="images/BipedalWalker/last.gif" alt="BipedalWalker after training" height="100"/>
+  <img src="images/CarRacing/last.gif" alt="CarRacing after training" height="100"/>
+  <img src="images/Swimmer/last.gif" alt="Swimmer after training" height="100"/>
+</div>
 
 ## Overview
 This project implements and evaluates multiple on-policy reinforcement learning agents trained on environments from the Gymnasium package.
