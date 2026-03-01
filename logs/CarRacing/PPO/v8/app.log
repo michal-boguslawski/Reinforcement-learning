@@ -1,0 +1,21 @@
+2026-02-25 15:48:25,483 : worker.worker : INFO : Current device cuda
+2026-02-25 15:48:25,645 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 15:48:25,672 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 15:48:25,677 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 15:48:25,685 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 15:48:25,693 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 15:48:25,699 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 15:48:25,707 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 15:48:25,714 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 15:48:25,721 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 15:48:27,535 : worker.worker : INFO : ==================== Start training ====================
+2026-02-25 15:48:28,201 : network.model : INFO : Saved model to logs/CarRacing/PPO/v8/model.pt
+2026-02-25 15:49:01,079 : evaluate.evaluate : INFO : Evaluation results: mean = -28.81, std = 0.00, min = -28.81, max = -28.81, count = 1
+2026-02-25 15:49:01,080 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 15:49:01,081 : evaluate.evaluate : INFO : Covariance matrix:
+[0.18973666 0.18973666 0.18973666]
+2026-02-25 17:04:18,011 : network.model : INFO : Saved model to logs/CarRacing/PPO/v8/model.pt
+2026-02-25 17:04:52,260 : evaluate.evaluate : INFO : Evaluation results: mean = 161.26, std = 0.00, min = 161.26, max = 161.26, count = 1
+2026-02-25 17:04:52,261 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 17:04:52,262 : evaluate.evaluate : INFO : Covariance matrix:
+[0.1620925  0.16863196 0.16129467]

@@ -1,0 +1,60 @@
+env_kwargs:
+  general_wrappers: {}
+  id: BipedalWalker-v3
+  normalize_rewards: false
+  num_envs: 8
+  training_wrappers:
+    scale_reward:
+      loc_factor: 0.0
+      scale_factor: 0.2
+  vectorization_mode: async
+env_name: BipedalWalker
+experiment_name: PPO/v6
+network:
+  kwargs:
+    backbone_kwargs: {}
+    backbone_name: mlp
+    core_kwargs: {}
+    core_name: identity
+    distribution: normal
+    head_kwargs:
+      activation_fn: relu
+      hidden_dim: 64
+    head_name: actor_critic
+    initial_deviation: 0.6
+    num_features: 64
+policy:
+  kwargs:
+    advantage_normalize: batch
+    clip_epsilon: 0.2
+    entropy_kwargs:
+      max_entropy: 0.03
+      min_entropy: 1.0e-06
+      scheduler_type: linear_entropy
+      total_steps: 300
+    exploration_method:
+      kwargs: {}
+      name: distribution
+    gamma: 0.99
+    lambda_: 0.95
+    num_epochs: 6
+    optimizer_kwargs:
+      actor_lr: 0.0003
+      critic_lr: 0.0005
+    scheduler_kwargs:
+      end_factor: 1.0e-05
+      scheduler_type: linear_lr
+      start_factor: 1.0
+      total_iters: 500
+    use_value_clipping: absolute
+    value_loss_coef: 0.5
+  type: ppo
+train_kwargs:
+  batch_size: 2048
+  minibatch_size: 128
+  num_steps: 1000000
+worker_kwargs:
+  device: auto
+  record_step: 100000
+  temperature_config: {}
+  verbose: 1

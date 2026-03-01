@@ -1,0 +1,23 @@
+2026-02-13 18:02:35,839 : worker.worker : INFO : Current device cpu
+2026-02-13 18:02:37,970 : worker.worker : INFO : ==================== Start training ====================
+2026-02-13 18:02:38,006 : network.model : INFO : Saved model to logs/LunarLander/Discrete/PPO/v1/model.pt
+2026-02-13 18:02:39,769 : evaluate.evaluate : INFO : Evaluation results: mean = -181.30, std = 0.00, min = -181.30, max = -181.30, count = 1
+2026-02-13 18:02:39,769 : evaluate.evaluate : INFO : Evaluation lengths: mean = 143.00, std = 0.00, min = 143.00, max = 143.00, count = 1
+2026-02-13 18:07:10,217 : network.model : INFO : Saved model to logs/LunarLander/Discrete/PPO/v1/model.pt
+2026-02-13 18:07:15,244 : evaluate.evaluate : INFO : Evaluation results: mean = 245.20, std = 0.00, min = 245.20, max = 245.20, count = 1
+2026-02-13 18:07:15,245 : evaluate.evaluate : INFO : Evaluation lengths: mean = 522.00, std = 0.00, min = 522.00, max = 522.00, count = 1
+2026-02-13 18:12:10,158 : network.model : INFO : Saved model to logs/LunarLander/Discrete/PPO/v1/model.pt
+2026-02-13 18:12:12,451 : evaluate.evaluate : INFO : Evaluation results: mean = 227.25, std = 0.00, min = 227.25, max = 227.25, count = 1
+2026-02-13 18:12:12,452 : evaluate.evaluate : INFO : Evaluation lengths: mean = 269.00, std = 0.00, min = 269.00, max = 269.00, count = 1
+2026-02-13 18:17:21,564 : network.model : INFO : Saved model to logs/LunarLander/Discrete/PPO/v1/model.pt
+2026-02-13 18:17:24,196 : evaluate.evaluate : INFO : Evaluation results: mean = -48.32, std = 0.00, min = -48.32, max = -48.32, count = 1
+2026-02-13 18:17:24,197 : evaluate.evaluate : INFO : Evaluation lengths: mean = 296.00, std = 0.00, min = 296.00, max = 296.00, count = 1
+2026-02-13 18:26:49,241 : network.model : INFO : Saved model to logs/LunarLander/Discrete/PPO/v1/model.pt
+2026-02-13 18:26:53,124 : evaluate.evaluate : INFO : Evaluation results: mean = 300.11, std = 0.00, min = 300.11, max = 300.11, count = 1
+2026-02-13 18:26:53,126 : evaluate.evaluate : INFO : Evaluation lengths: mean = 263.00, std = 0.00, min = 263.00, max = 263.00, count = 1
+2026-02-13 18:36:47,036 : network.model : INFO : Saved model to logs/LunarLander/Discrete/PPO/v1/model.pt
+2026-02-13 18:36:51,179 : evaluate.evaluate : INFO : Evaluation results: mean = 294.10, std = 0.00, min = 294.10, max = 294.10, count = 1
+2026-02-13 18:36:51,182 : evaluate.evaluate : INFO : Evaluation lengths: mean = 284.00, std = 0.00, min = 284.00, max = 284.00, count = 1
+2026-02-13 18:42:28,162 : evaluate.evaluate : INFO : Evaluation results: mean = 265.68, std = 47.92, min = -40.94, max = 325.51, count = 1000
+2026-02-13 18:42:28,163 : evaluate.evaluate : INFO : Evaluation lengths: mean = 228.68, std = 122.05, min = 95.00, max = 1000.00, count = 1000
+2026-02-13 18:42:28,382 : worker.worker : INFO : ==================== End training ====================

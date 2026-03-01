@@ -1,0 +1,41 @@
+2026-02-13 17:37:57,775 : worker.worker : INFO : Current device cpu
+2026-02-13 17:37:57,783 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:37:57,783 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:37:57,826 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:37:57,827 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:37:57,838 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:37:57,839 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:37:57,855 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:37:57,857 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:37:57,870 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:37:57,871 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:37:57,878 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:37:57,878 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:37:57,892 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:37:57,896 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:37:57,917 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:37:57,918 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:37:57,930 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:37:57,932 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:38:00,446 : worker.worker : INFO : ==================== Start training ====================
+2026-02-13 17:38:00,489 : network.model : INFO : Saved model to logs/CartPole/PPO/v1/model.pt
+2026-02-13 17:38:03,685 : evaluate.evaluate : INFO : Evaluation results: mean = 9.00, std = 0.00, min = 9.00, max = 9.00, count = 1
+2026-02-13 17:38:03,689 : evaluate.evaluate : INFO : Evaluation lengths: mean = 9.00, std = 0.00, min = 9.00, max = 9.00, count = 1
+2026-02-13 17:41:34,014 : network.model : INFO : Saved model to logs/CartPole/PPO/v1/model.pt
+2026-02-13 17:41:36,551 : evaluate.evaluate : INFO : Evaluation results: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:41:36,551 : evaluate.evaluate : INFO : Evaluation lengths: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:43:37,515 : network.model : INFO : Saved model to logs/CartPole/PPO/v1/model.pt
+2026-02-13 17:43:41,124 : evaluate.evaluate : INFO : Evaluation results: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:43:41,124 : evaluate.evaluate : INFO : Evaluation lengths: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:45:30,383 : network.model : INFO : Saved model to logs/CartPole/PPO/v1/model.pt
+2026-02-13 17:45:34,642 : evaluate.evaluate : INFO : Evaluation results: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:45:34,643 : evaluate.evaluate : INFO : Evaluation lengths: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:47:13,363 : network.model : INFO : Saved model to logs/CartPole/PPO/v1/model.pt
+2026-02-13 17:47:19,619 : evaluate.evaluate : INFO : Evaluation results: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:47:19,621 : evaluate.evaluate : INFO : Evaluation lengths: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:49:07,182 : network.model : INFO : Saved model to logs/CartPole/PPO/v1/model.pt
+2026-02-13 17:49:11,122 : evaluate.evaluate : INFO : Evaluation results: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:49:11,122 : evaluate.evaluate : INFO : Evaluation lengths: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:53:54,460 : evaluate.evaluate : INFO : Evaluation results: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1000
+2026-02-13 17:53:54,461 : evaluate.evaluate : INFO : Evaluation lengths: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1000
+2026-02-13 17:53:54,556 : worker.worker : INFO : ==================== End training ====================

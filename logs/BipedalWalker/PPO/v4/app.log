@@ -1,0 +1,106 @@
+2026-02-20 07:00:39,189 : worker.worker : INFO : Current device cpu
+2026-02-20 07:00:41,416 : worker.worker : INFO : ==================== Start training ====================
+2026-02-20 07:00:41,532 : network.model : INFO : Saved model to logs/BipedalWalker/PPO/v4/model.pt
+2026-02-20 07:00:43,843 : evaluate.evaluate : INFO : Final state tensor([-5.6785e-01,  5.7672e-02,  8.3553e-02, -9.3131e-02, -7.1792e-01,
+        -3.3990e-01,  8.7472e-01, -4.9607e-01,  0.0000e+00, -7.9270e-01,
+        -3.2523e-01,  9.3480e-01,  2.2352e-08,  0.0000e+00,  1.6000e-01,
+         1.6182e-01,  1.6748e-01,  1.7769e-01,  1.9387e-01,  2.1868e-01,
+         2.5740e-01,  3.2157e-01,  4.4156e-01,  7.0459e-01])
+2026-02-20 07:00:43,844 : evaluate.evaluate : INFO : Evaluation results: mean = -97.31, std = 0.00, min = -97.31, max = -97.31, count = 1
+2026-02-20 07:00:43,845 : evaluate.evaluate : INFO : Evaluation lengths: mean = 97.00, std = 0.00, min = 97.00, max = 97.00, count = 1
+2026-02-20 07:00:43,846 : evaluate.evaluate : INFO : Covariance matrix:
+[0.18973666 0.18973666 0.18973666 0.18973666]
+2026-02-20 07:35:02,034 : network.model : INFO : Saved model to logs/BipedalWalker/PPO/v4/model.pt
+2026-02-20 07:35:08,056 : evaluate.evaluate : INFO : Final state tensor([-1.5170e+00, -9.0903e-02,  3.2091e-01, -3.2028e-02,  1.1064e+00,
+         1.9464e-02, -6.1933e-01,  8.6276e-04,  1.0000e+00, -7.0275e-01,
+        -7.4636e-02,  9.3501e-01, -1.9113e-05,  0.0000e+00,  2.1771e-01,
+         2.2018e-01,  2.2706e-01,  2.3926e-01,  2.5948e-01,  2.9232e-01,
+         3.4250e-01,  4.3706e-01,  6.1208e-01,  1.0000e+00])
+2026-02-20 07:35:08,064 : evaluate.evaluate : INFO : Evaluation results: mean = -93.63, std = 0.00, min = -93.63, max = -93.63, count = 1
+2026-02-20 07:35:08,064 : evaluate.evaluate : INFO : Evaluation lengths: mean = 139.00, std = 0.00, min = 139.00, max = 139.00, count = 1
+2026-02-20 07:35:08,067 : evaluate.evaluate : INFO : Covariance matrix:
+[0.18411319 0.18139152 0.16220497 0.18471268]
+2026-02-20 08:14:11,975 : network.model : INFO : Saved model to logs/BipedalWalker/PPO/v4/model.pt
+2026-02-20 08:15:36,044 : evaluate.evaluate : INFO : Final state tensor([ 0.2156,  0.0015,  0.5369, -0.0339,  1.1196, -0.1400,  0.5854, -1.0000,
+         0.0000, -0.4805, -1.0136, -0.3019,  0.6971,  1.0000,  0.2878,  0.2879,
+         0.2955,  0.3129,  0.3427,  0.3908,  0.4640,  0.5766,  0.7939,  1.0000])
+2026-02-20 08:15:36,048 : evaluate.evaluate : INFO : Evaluation results: mean = 300.69, std = 0.00, min = 300.69, max = 300.69, count = 1
+2026-02-20 08:15:36,049 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1272.00, std = 0.00, min = 1272.00, max = 1272.00, count = 1
+2026-02-20 08:15:36,051 : evaluate.evaluate : INFO : Covariance matrix:
+[0.20644863 0.16107364 0.1210142  0.17250139]
+2026-02-20 08:50:51,899 : network.model : INFO : Saved model to logs/BipedalWalker/PPO/v4/model.pt
+2026-02-20 08:51:39,573 : evaluate.evaluate : INFO : Final state tensor([ 0.4285, -0.0012,  0.4418,  0.0128,  1.1272, -0.0170, -0.1528,  0.9689,
+         1.0000, -0.6038,  1.0439, -0.3453, -1.0000,  0.0000,  0.2981,  0.2954,
+         0.3002,  0.3150,  0.3383,  0.3732,  0.4259,  0.5275,  0.7583,  1.0000])
+2026-02-20 08:51:39,575 : evaluate.evaluate : INFO : Evaluation results: mean = 311.62, std = 0.00, min = 311.62, max = 311.62, count = 1
+2026-02-20 08:51:39,575 : evaluate.evaluate : INFO : Evaluation lengths: mean = 978.00, std = 0.00, min = 978.00, max = 978.00, count = 1
+2026-02-20 08:51:39,576 : evaluate.evaluate : INFO : Covariance matrix:
+[0.18676041 0.15195939 0.09216598 0.16602515]
+2026-02-20 09:29:50,651 : network.model : INFO : Saved model to logs/BipedalWalker/PPO/v4/model.pt
+2026-02-20 09:29:58,852 : evaluate.evaluate : INFO : Final state tensor([-0.8236, -0.0533,  0.3131,  0.0603, -0.3741, -1.3308, -0.6007,  0.0000,
+         0.0000, -0.1159, -0.9976, -0.1362,  1.0000,  1.0000,  0.1900,  0.1923,
+         0.1999,  0.2133,  0.2342,  0.2659,  0.3142,  0.3886,  0.5330,  0.9260])
+2026-02-20 09:29:58,853 : evaluate.evaluate : INFO : Evaluation results: mean = 1.55, std = 0.00, min = 1.55, max = 1.55, count = 1
+2026-02-20 09:29:58,853 : evaluate.evaluate : INFO : Evaluation lengths: mean = 311.00, std = 0.00, min = 311.00, max = 311.00, count = 1
+2026-02-20 09:29:58,855 : evaluate.evaluate : INFO : Covariance matrix:
+[0.1396054  0.1278267  0.07272547 0.15140812]
+2026-02-20 10:08:35,903 : network.model : INFO : Saved model to logs/BipedalWalker/PPO/v4/model.pt
+2026-02-20 10:08:50,499 : evaluate.evaluate : INFO : Final state tensor([-1.2006, -0.1244,  0.4338,  0.0613, -0.4657, -0.6102, -0.6095,  0.0000,
+         0.0000,  0.5378,  0.6302, -0.2192,  1.0000,  0.0000,  0.2205,  0.2213,
+         0.2261,  0.2358,  0.2523,  0.2774,  0.3148,  0.3732,  0.5029,  0.8224])
+2026-02-20 10:08:50,500 : evaluate.evaluate : INFO : Evaluation results: mean = 34.78, std = 0.00, min = 34.78, max = 34.78, count = 1
+2026-02-20 10:08:50,502 : evaluate.evaluate : INFO : Evaluation lengths: mean = 404.00, std = 0.00, min = 404.00, max = 404.00, count = 1
+2026-02-20 10:08:50,503 : evaluate.evaluate : INFO : Covariance matrix:
+[0.11949494 0.10601133 0.06326745 0.1325377 ]
+2026-02-20 10:44:52,050 : network.model : INFO : Saved model to logs/BipedalWalker/PPO/v4/model.pt
+2026-02-20 10:45:36,954 : evaluate.evaluate : INFO : Final state tensor([ 0.1640,  0.0042,  0.5737,  0.0325,  1.0221, -0.5700,  0.6917,  1.0000,
+         0.0000,  0.0866,  1.0000, -0.4778,  1.0000,  0.0000,  0.3469,  0.3444,
+         0.3527,  0.3731,  0.4104,  0.4700,  0.5752,  0.7355,  1.0000,  1.0000])
+2026-02-20 10:45:36,955 : evaluate.evaluate : INFO : Evaluation results: mean = 326.68, std = 0.00, min = 326.68, max = 326.68, count = 1
+2026-02-20 10:45:36,956 : evaluate.evaluate : INFO : Evaluation lengths: mean = 816.00, std = 0.00, min = 816.00, max = 816.00, count = 1
+2026-02-20 10:45:36,957 : evaluate.evaluate : INFO : Covariance matrix:
+[0.09496086 0.08108755 0.0542076  0.10673887]
+2026-02-20 11:20:25,274 : network.model : INFO : Saved model to logs/BipedalWalker/PPO/v4/model.pt
+2026-02-20 11:20:59,693 : evaluate.evaluate : INFO : Final state tensor([-1.2294, -0.1571,  0.5529,  0.0634, -0.8744, -0.6878, -0.6199,  0.0000,
+         0.0000,  0.5757,  0.2884,  0.1652,  0.6225,  0.0000,  0.2219,  0.2219,
+         0.2270,  0.2378,  0.2558,  0.2818,  0.3201,  0.3808,  0.4976,  0.7969])
+2026-02-20 11:20:59,694 : evaluate.evaluate : INFO : Evaluation results: mean = 192.15, std = 0.00, min = 192.15, max = 192.15, count = 1
+2026-02-20 11:20:59,695 : evaluate.evaluate : INFO : Evaluation lengths: mean = 752.00, std = 0.00, min = 752.00, max = 752.00, count = 1
+2026-02-20 11:20:59,696 : evaluate.evaluate : INFO : Covariance matrix:
+[0.07901661 0.0633395  0.04329566 0.08826475]
+2026-02-20 11:57:05,690 : network.model : INFO : Saved model to logs/BipedalWalker/PPO/v4/model.pt
+2026-02-20 11:57:17,517 : evaluate.evaluate : INFO : Final state tensor([-1.5472, -0.2141,  0.5294, -0.0391, -0.8355,  0.0000, -0.7084, -1.0000,
+         0.0000,  0.5189,  0.6335,  0.7101,  1.0000,  0.0000,  0.2196,  0.2218,
+         0.2284,  0.2410,  0.2614,  0.2932,  0.3451,  0.4241,  0.5612,  0.8708])
+2026-02-20 11:57:17,531 : evaluate.evaluate : INFO : Evaluation results: mean = -30.44, std = 0.00, min = -30.44, max = -30.44, count = 1
+2026-02-20 11:57:17,542 : evaluate.evaluate : INFO : Evaluation lengths: mean = 260.00, std = 0.00, min = 260.00, max = 260.00, count = 1
+2026-02-20 11:57:17,544 : evaluate.evaluate : INFO : Covariance matrix:
+[0.06997402 0.05264359 0.03772693 0.07634472]
+2026-02-20 12:33:31,166 : network.model : INFO : Saved model to logs/BipedalWalker/PPO/v4/model.pt
+2026-02-20 12:34:02,828 : evaluate.evaluate : INFO : Final state tensor([ 1.9869e-02,  6.8218e-03,  6.2045e-01, -2.4058e-03,  1.1379e+00,
+        -4.6275e-04, -3.5013e-02, -3.6138e-01,  1.0000e+00,  2.3836e-01,
+         1.2381e+00, -6.9700e-01, -1.0001e+00,  0.0000e+00,  3.6113e-01,
+         3.6485e-01,  3.7762e-01,  4.0099e-01,  4.3512e-01,  4.9347e-01,
+         5.8881e-01,  7.3648e-01,  1.0000e+00,  1.0000e+00])
+2026-02-20 12:34:02,829 : evaluate.evaluate : INFO : Evaluation results: mean = 330.30, std = 0.00, min = 330.30, max = 330.30, count = 1
+2026-02-20 12:34:02,830 : evaluate.evaluate : INFO : Evaluation lengths: mean = 806.00, std = 0.00, min = 806.00, max = 806.00, count = 1
+2026-02-20 12:34:02,831 : evaluate.evaluate : INFO : Covariance matrix:
+[0.06548855 0.04637222 0.03431568 0.06917807]
+2026-02-20 13:11:10,513 : network.model : INFO : Saved model to logs/BipedalWalker/PPO/v4/model.pt
+2026-02-20 13:11:53,387 : evaluate.evaluate : INFO : Final state tensor([-3.2301e-02,  1.7697e-02,  7.4851e-01,  9.9973e-02,  1.1339e+00,
+        -2.0862e-07,  7.3361e-01, -1.0000e+00,  0.0000e+00,  5.2010e-02,
+        -1.5449e+00, -1.1029e-01,  9.6543e-01,  0.0000e+00,  3.9892e-01,
+         4.0541e-01,  4.1717e-01,  4.4029e-01,  4.7708e-01,  5.2369e-01,
+         5.9693e-01,  7.0924e-01,  1.0000e+00,  1.0000e+00])
+2026-02-20 13:11:53,389 : evaluate.evaluate : INFO : Evaluation results: mean = 332.89, std = 0.00, min = 332.89, max = 332.89, count = 1
+2026-02-20 13:11:53,390 : evaluate.evaluate : INFO : Evaluation lengths: mean = 785.00, std = 0.00, min = 785.00, max = 785.00, count = 1
+2026-02-20 13:11:53,391 : evaluate.evaluate : INFO : Covariance matrix:
+[0.06446443 0.04530567 0.03362596 0.0684808 ]
+2026-02-20 13:33:40,022 : evaluate.evaluate : INFO : Final state tensor([ 0.0517, -0.0013,  0.6389,  0.0066,  1.0787,  0.1087,  0.4263, -0.2668,
+         0.3750,  0.1070,  0.3301, -0.5231, -0.3936,  0.2500,  0.3530,  0.3566,
+         0.3685,  0.3915,  0.4269,  0.4817,  0.5669,  0.7126,  0.9681,  1.0000])
+2026-02-20 13:33:40,024 : evaluate.evaluate : INFO : Evaluation results: mean = 275.20, std = 110.10, min = -60.55, max = 334.55, count = 1000
+2026-02-20 13:33:40,026 : evaluate.evaluate : INFO : Evaluation lengths: mean = 726.02, std = 152.37, min = 168.00, max = 982.00, count = 1000
+2026-02-20 13:33:40,030 : evaluate.evaluate : INFO : Covariance matrix:
+[0.06446443 0.04530567 0.03362596 0.0684808 ]
+2026-02-20 13:33:40,265 : worker.worker : INFO : ==================== End training ====================

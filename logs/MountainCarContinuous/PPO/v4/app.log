@@ -1,0 +1,64 @@
+2026-02-15 11:17:50,848 : worker.worker : INFO : Current device cpu
+2026-02-15 11:17:50,855 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 0.0 -5
+2026-02-15 11:17:50,856 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 100] [0, 10.0] None 0.5
+2026-02-15 11:17:50,856 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params [-1.0] None 1
+2026-02-15 11:17:50,895 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 0.0 -5
+2026-02-15 11:17:50,896 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 100] [0, 10.0] None 0.5
+2026-02-15 11:17:50,896 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params [-1.0] None 1
+2026-02-15 11:17:50,916 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 0.0 -5
+2026-02-15 11:17:50,917 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 100] [0, 10.0] None 0.5
+2026-02-15 11:17:50,918 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params [-1.0] None 1
+2026-02-15 11:17:50,929 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 0.0 -5
+2026-02-15 11:17:50,930 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 100] [0, 10.0] None 0.5
+2026-02-15 11:17:50,931 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params [-1.0] None 1
+2026-02-15 11:17:50,952 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 0.0 -5
+2026-02-15 11:17:50,954 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 100] [0, 10.0] None 0.5
+2026-02-15 11:17:50,954 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params [-1.0] None 1
+2026-02-15 11:17:50,968 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 0.0 -5
+2026-02-15 11:17:50,969 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 100] [0, 10.0] None 0.5
+2026-02-15 11:17:50,969 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params [-1.0] None 1
+2026-02-15 11:17:50,989 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 0.0 -5
+2026-02-15 11:17:50,991 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 100] [0, 10.0] None 0.5
+2026-02-15 11:17:50,991 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params [-1.0] None 1
+2026-02-15 11:17:51,015 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 0.0 -5
+2026-02-15 11:17:51,016 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 100] [0, 10.0] None 0.5
+2026-02-15 11:17:51,016 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params [-1.0] None 1
+2026-02-15 11:17:51,045 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 0.0 -5
+2026-02-15 11:17:51,046 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 100] [0, 10.0] None 0.5
+2026-02-15 11:17:51,047 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params [-1.0] None 1
+2026-02-15 11:17:55,243 : worker.worker : INFO : ==================== Start training ====================
+2026-02-15 11:17:55,270 : network.model : INFO : Saved model to logs/MountainCarContinuous/PPO/v4/model.pt
+2026-02-15 11:18:04,879 : evaluate.evaluate : INFO : Evaluation results: mean = -9.74, std = 0.00, min = -9.74, max = -9.74, count = 1
+2026-02-15 11:18:04,880 : evaluate.evaluate : INFO : Evaluation lengths: mean = 999.00, std = 0.00, min = 999.00, max = 999.00, count = 1
+2026-02-15 11:18:04,881 : evaluate.evaluate : INFO : Covariance matrix:
+[0.31622776]
+2026-02-15 11:22:39,934 : network.model : INFO : Saved model to logs/MountainCarContinuous/PPO/v4/model.pt
+2026-02-15 11:22:41,568 : evaluate.evaluate : INFO : Evaluation results: mean = 96.75, std = 0.00, min = 96.75, max = 96.75, count = 1
+2026-02-15 11:22:41,569 : evaluate.evaluate : INFO : Evaluation lengths: mean = 160.00, std = 0.00, min = 160.00, max = 160.00, count = 1
+2026-02-15 11:22:41,570 : evaluate.evaluate : INFO : Covariance matrix:
+[0.15633304]
+2026-02-15 11:27:01,052 : network.model : INFO : Saved model to logs/MountainCarContinuous/PPO/v4/model.pt
+2026-02-15 11:27:03,198 : evaluate.evaluate : INFO : Evaluation results: mean = 97.34, std = 0.00, min = 97.34, max = 97.34, count = 1
+2026-02-15 11:27:03,198 : evaluate.evaluate : INFO : Evaluation lengths: mean = 227.00, std = 0.00, min = 227.00, max = 227.00, count = 1
+2026-02-15 11:27:03,199 : evaluate.evaluate : INFO : Covariance matrix:
+[0.11278717]
+2026-02-15 11:31:15,780 : network.model : INFO : Saved model to logs/MountainCarContinuous/PPO/v4/model.pt
+2026-02-15 11:31:17,897 : evaluate.evaluate : INFO : Evaluation results: mean = 98.24, std = 0.00, min = 98.24, max = 98.24, count = 1
+2026-02-15 11:31:17,898 : evaluate.evaluate : INFO : Evaluation lengths: mean = 232.00, std = 0.00, min = 232.00, max = 232.00, count = 1
+2026-02-15 11:31:17,899 : evaluate.evaluate : INFO : Covariance matrix:
+[0.07577]
+2026-02-15 11:35:35,599 : network.model : INFO : Saved model to logs/MountainCarContinuous/PPO/v4/model.pt
+2026-02-15 11:35:38,167 : evaluate.evaluate : INFO : Evaluation results: mean = 98.50, std = 0.00, min = 98.50, max = 98.50, count = 1
+2026-02-15 11:35:38,168 : evaluate.evaluate : INFO : Evaluation lengths: mean = 309.00, std = 0.00, min = 309.00, max = 309.00, count = 1
+2026-02-15 11:35:38,168 : evaluate.evaluate : INFO : Covariance matrix:
+[0.0541812]
+2026-02-15 11:39:49,984 : network.model : INFO : Saved model to logs/MountainCarContinuous/PPO/v4/model.pt
+2026-02-15 11:39:52,382 : evaluate.evaluate : INFO : Evaluation results: mean = 98.76, std = 0.00, min = 98.76, max = 98.76, count = 1
+2026-02-15 11:39:52,382 : evaluate.evaluate : INFO : Evaluation lengths: mean = 287.00, std = 0.00, min = 287.00, max = 287.00, count = 1
+2026-02-15 11:39:52,383 : evaluate.evaluate : INFO : Covariance matrix:
+[0.0370634]
+2026-02-15 11:46:04,049 : evaluate.evaluate : INFO : Evaluation results: mean = 98.55, std = 0.13, min = 98.18, max = 98.86, count = 1000
+2026-02-15 11:46:04,049 : evaluate.evaluate : INFO : Evaluation lengths: mean = 429.62, std = 117.03, min = 244.00, max = 946.00, count = 1000
+2026-02-15 11:46:04,050 : evaluate.evaluate : INFO : Covariance matrix:
+[0.0370634]
+2026-02-15 11:46:04,118 : worker.worker : INFO : ==================== End training ====================

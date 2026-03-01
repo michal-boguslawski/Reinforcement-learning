@@ -1,0 +1,41 @@
+2026-02-12 18:35:53,897 : worker.worker : INFO : Current device cpu
+2026-02-12 18:35:53,903 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:35:53,903 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:35:53,927 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:35:53,928 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:35:53,934 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:35:53,935 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:35:53,945 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:35:53,946 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:35:53,954 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:35:53,957 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:35:53,966 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:35:53,967 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:35:53,973 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:35:53,974 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:35:53,985 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:35:53,986 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:35:53,999 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:35:54,001 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:35:55,648 : worker.worker : INFO : ==================== Start training ====================
+2026-02-12 18:35:55,676 : network.model : INFO : Saved model to logs/Acrobot/PPO/v1/model.pt
+2026-02-12 18:35:58,886 : evaluate.evaluate : INFO : Evaluation results: mean = -287.00, std = 0.00, min = -287.00, max = -287.00, count = 1
+2026-02-12 18:35:58,886 : evaluate.evaluate : INFO : Evaluation lengths: mean = 288.00, std = 0.00, min = 288.00, max = 288.00, count = 1
+2026-02-12 18:37:41,652 : network.model : INFO : Saved model to logs/Acrobot/PPO/v1/model.pt
+2026-02-12 18:37:42,790 : evaluate.evaluate : INFO : Evaluation results: mean = -98.00, std = 0.00, min = -98.00, max = -98.00, count = 1
+2026-02-12 18:37:42,791 : evaluate.evaluate : INFO : Evaluation lengths: mean = 99.00, std = 0.00, min = 99.00, max = 99.00, count = 1
+2026-02-12 18:39:28,963 : network.model : INFO : Saved model to logs/Acrobot/PPO/v1/model.pt
+2026-02-12 18:39:30,021 : evaluate.evaluate : INFO : Evaluation results: mean = -70.00, std = 0.00, min = -70.00, max = -70.00, count = 1
+2026-02-12 18:39:30,021 : evaluate.evaluate : INFO : Evaluation lengths: mean = 71.00, std = 0.00, min = 71.00, max = 71.00, count = 1
+2026-02-12 18:41:21,610 : network.model : INFO : Saved model to logs/Acrobot/PPO/v1/model.pt
+2026-02-12 18:41:22,327 : evaluate.evaluate : INFO : Evaluation results: mean = -81.00, std = 0.00, min = -81.00, max = -81.00, count = 1
+2026-02-12 18:41:22,327 : evaluate.evaluate : INFO : Evaluation lengths: mean = 82.00, std = 0.00, min = 82.00, max = 82.00, count = 1
+2026-02-12 18:43:04,038 : network.model : INFO : Saved model to logs/Acrobot/PPO/v1/model.pt
+2026-02-12 18:43:05,654 : evaluate.evaluate : INFO : Evaluation results: mean = -84.00, std = 0.00, min = -84.00, max = -84.00, count = 1
+2026-02-12 18:43:05,655 : evaluate.evaluate : INFO : Evaluation lengths: mean = 85.00, std = 0.00, min = 85.00, max = 85.00, count = 1
+2026-02-12 18:44:43,075 : network.model : INFO : Saved model to logs/Acrobot/PPO/v1/model.pt
+2026-02-12 18:44:44,957 : evaluate.evaluate : INFO : Evaluation results: mean = -75.00, std = 0.00, min = -75.00, max = -75.00, count = 1
+2026-02-12 18:44:44,964 : evaluate.evaluate : INFO : Evaluation lengths: mean = 76.00, std = 0.00, min = 76.00, max = 76.00, count = 1
+2026-02-12 18:45:44,544 : evaluate.evaluate : INFO : Evaluation results: mean = -84.20, std = 34.89, min = -500.00, max = -61.00, count = 1000
+2026-02-12 18:45:44,554 : evaluate.evaluate : INFO : Evaluation lengths: mean = 85.20, std = 34.87, min = 62.00, max = 500.00, count = 1000
+2026-02-12 18:45:44,732 : worker.worker : INFO : ==================== End training ====================

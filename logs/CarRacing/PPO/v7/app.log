@@ -1,0 +1,71 @@
+2026-02-25 07:47:50,242 : worker.worker : INFO : Current device cuda
+2026-02-25 07:47:50,391 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 07:47:50,417 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 07:47:50,422 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 07:47:50,426 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 07:47:50,432 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 07:47:50,438 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 07:47:50,442 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 07:47:50,448 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 07:47:50,453 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-25 07:47:51,983 : worker.worker : INFO : ==================== Start training ====================
+2026-02-25 07:47:52,669 : network.model : INFO : Saved model to logs/CarRacing/PPO/v7/model.pt
+2026-02-25 07:48:19,237 : evaluate.evaluate : INFO : Evaluation results: mean = -7.41, std = 0.00, min = -7.41, max = -7.41, count = 1
+2026-02-25 07:48:19,238 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 07:48:19,239 : evaluate.evaluate : INFO : Covariance matrix:
+[0.18973666 0.18973666 0.18973666]
+2026-02-25 08:33:40,052 : network.model : INFO : Saved model to logs/CarRacing/PPO/v7/model.pt
+2026-02-25 08:34:07,010 : evaluate.evaluate : INFO : Evaluation results: mean = 168.38, std = 0.00, min = 168.38, max = 168.38, count = 1
+2026-02-25 08:34:07,010 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 08:34:07,011 : evaluate.evaluate : INFO : Covariance matrix:
+[0.19130456 0.17767304 0.17239146]
+2026-02-25 09:19:17,245 : network.model : INFO : Saved model to logs/CarRacing/PPO/v7/model.pt
+2026-02-25 09:19:43,439 : evaluate.evaluate : INFO : Evaluation results: mean = -41.72, std = 0.00, min = -41.72, max = -41.72, count = 1
+2026-02-25 09:19:43,439 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 09:19:43,441 : evaluate.evaluate : INFO : Covariance matrix:
+[0.1463613  0.11794889 0.13640621]
+2026-02-25 10:04:53,889 : network.model : INFO : Saved model to logs/CarRacing/PPO/v7/model.pt
+2026-02-25 10:05:19,574 : evaluate.evaluate : INFO : Evaluation results: mean = -62.55, std = 0.00, min = -62.55, max = -62.55, count = 1
+2026-02-25 10:05:19,575 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 10:05:19,576 : evaluate.evaluate : INFO : Covariance matrix:
+[0.09595093 0.08910158 0.10372094]
+2026-02-25 10:50:28,106 : network.model : INFO : Saved model to logs/CarRacing/PPO/v7/model.pt
+2026-02-25 10:50:54,437 : evaluate.evaluate : INFO : Evaluation results: mean = -18.24, std = 0.00, min = -18.24, max = -18.24, count = 1
+2026-02-25 10:50:54,437 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 10:50:54,438 : evaluate.evaluate : INFO : Covariance matrix:
+[0.06086547 0.06006758 0.06991304]
+2026-02-25 11:36:00,767 : network.model : INFO : Saved model to logs/CarRacing/PPO/v7/model.pt
+2026-02-25 11:36:26,280 : evaluate.evaluate : INFO : Evaluation results: mean = -25.00, std = 0.00, min = -25.00, max = -25.00, count = 1
+2026-02-25 11:36:26,280 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 11:36:26,281 : evaluate.evaluate : INFO : Covariance matrix:
+[0.04052802 0.03656683 0.04343113]
+2026-02-25 12:38:34,958 : network.model : INFO : Saved model to logs/CarRacing/PPO/v7/model.pt
+2026-02-25 12:39:04,873 : evaluate.evaluate : INFO : Evaluation results: mean = -39.62, std = 0.00, min = -39.62, max = -39.62, count = 1
+2026-02-25 12:39:04,873 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 12:39:04,874 : evaluate.evaluate : INFO : Covariance matrix:
+[0.0265665  0.02269464 0.02826725]
+2026-02-25 13:40:49,220 : network.model : INFO : Saved model to logs/CarRacing/PPO/v7/model.pt
+2026-02-25 13:41:17,514 : evaluate.evaluate : INFO : Evaluation results: mean = -43.78, std = 0.00, min = -43.78, max = -43.78, count = 1
+2026-02-25 13:41:17,515 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 13:41:17,516 : evaluate.evaluate : INFO : Covariance matrix:
+[0.01817067 0.01595736 0.0194315 ]
+2026-02-25 14:41:27,513 : network.model : INFO : Saved model to logs/CarRacing/PPO/v7/model.pt
+2026-02-25 14:41:56,757 : evaluate.evaluate : INFO : Evaluation results: mean = -59.32, std = 0.00, min = -59.32, max = -59.32, count = 1
+2026-02-25 14:41:56,757 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 14:41:56,758 : evaluate.evaluate : INFO : Covariance matrix:
+[0.01389072 0.01268016 0.01515173]
+2026-02-25 15:43:21,696 : network.model : INFO : Saved model to logs/CarRacing/PPO/v7/model.pt
+2026-02-25 15:43:50,947 : evaluate.evaluate : INFO : Evaluation results: mean = -44.08, std = 0.00, min = -44.08, max = -44.08, count = 1
+2026-02-25 15:43:50,948 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 15:43:50,949 : evaluate.evaluate : INFO : Covariance matrix:
+[0.01148368 0.01049485 0.01244453]
+2026-02-25 16:46:13,281 : network.model : INFO : Saved model to logs/CarRacing/PPO/v7/model.pt
+2026-02-25 16:46:43,199 : evaluate.evaluate : INFO : Evaluation results: mean = -53.07, std = 0.00, min = -53.07, max = -53.07, count = 1
+2026-02-25 16:46:43,200 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-25 16:46:43,201 : evaluate.evaluate : INFO : Covariance matrix:
+[0.01057508 0.00964613 0.01137103]
+2026-02-25 18:11:54,326 : evaluate.evaluate : INFO : Evaluation results: mean = -66.45, std = 8.91, min = -92.42, max = -43.09, count = 1000
+2026-02-25 18:11:54,327 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1000
+2026-02-25 18:11:54,328 : evaluate.evaluate : INFO : Covariance matrix:
+[0.01057508 0.00964613 0.01137103]
+2026-02-25 18:11:54,485 : worker.worker : INFO : ==================== End training ====================

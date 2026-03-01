@@ -1,0 +1,133 @@
+env_kwargs:
+  general_wrappers: {}
+  hardcore: true
+  id: BipedalWalker-v3
+  normalize_rewards: false
+  num_envs: 8
+  training_wrappers:
+    action_reward:
+      abs_factors:
+      - 0.002
+      - 0.001
+      - 0.002
+      - 0.001
+      pow_factors:
+      - -0.001
+      - -0.002
+      - -0.01
+      - -0.002
+    clip_reward:
+      min_reward: -50.0
+    no_movement_truncate:
+      eps: 0.01
+      index: 2
+      penalty: 2.0
+    observations_interaction:
+      factors:
+        (5, 10): -0.2
+    power_obs_reward:
+      abs_factors:
+      - -0.01
+      - -0.005
+      - 0.0
+      - -0.002
+      - -0.001
+      - 0.001
+      - 0
+      - 0
+      - 0
+      - -0.001
+      - 0.001
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      nominal_factors:
+      - 0.0
+      - 0.0
+      - 0.02
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0
+      - 0
+      - 0.001
+      - 0.0
+      - 0.0
+      - 0
+      - 0
+      - 0.001
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    scale_reward:
+      loc_factor: -0.002
+      scale_factor: 0.1
+    terminal_bonus:
+      truncated_bonus: -1.0
+  vectorization_mode: async
+env_name: BipedalWalkerHardcore
+experiment_name: PPO/v1
+network:
+  kwargs:
+    backbone_kwargs:
+      hidden_dims: 128
+    backbone_name: mlp
+    core_kwargs: {}
+    core_name: identity
+    distribution: normal
+    head_kwargs: {}
+    head_name: actor_critic
+    initial_deviation: 1.0
+    num_features: 128
+policy:
+  kwargs:
+    advantage_normalize: batch
+    clip_epsilon: 0.2
+    entropy_kwargs:
+      max_entropy: 0.02
+      min_entropy: 0.0001
+      scheduler_type: linear_entropy
+      total_steps: 3000
+    exploration_method:
+      kwargs: {}
+      name: distribution
+    gamma: 0.99
+    lambda_: 0.95
+    num_epochs: 6
+    optimizer_kwargs:
+      actor_lr: 0.0003
+      critic_lr: 0.0005
+    scheduler_kwargs:
+      end_factor: 0.0001
+      scheduler_type: linear_lr
+      start_factor: 1.0
+      total_iters: 5000
+    use_value_clipping: relative
+    value_loss_coef: 0.5
+  type: ppo
+train_kwargs:
+  batch_size: 2048
+  minibatch_size: 128
+  num_steps: 10000000
+worker_kwargs:
+  device: auto
+  record_step: 200000
+  temperature_config: {}
+  verbose: 1

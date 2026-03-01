@@ -1,0 +1,37 @@
+2026-02-13 18:48:51,525 : worker.worker : INFO : Current device cpu
+2026-02-13 18:48:54,622 : worker.worker : INFO : ==================== Start training ====================
+2026-02-13 18:48:54,727 : network.model : INFO : Saved model to logs/LunarLander/Continuous/PPO/v1/model.pt
+2026-02-13 18:48:57,769 : evaluate.evaluate : INFO : Evaluation results: mean = -220.22, std = 0.00, min = -220.22, max = -220.22, count = 1
+2026-02-13 18:48:57,772 : evaluate.evaluate : INFO : Evaluation lengths: mean = 74.00, std = 0.00, min = 74.00, max = 74.00, count = 1
+2026-02-13 18:48:57,773 : evaluate.evaluate : INFO : Covariance matrix:
+[0.31622776 0.31622776]
+2026-02-13 19:10:33,666 : network.model : INFO : Saved model to logs/LunarLander/Continuous/PPO/v1/model.pt
+2026-02-13 19:10:54,545 : evaluate.evaluate : INFO : Evaluation results: mean = -28.75, std = 0.00, min = -28.75, max = -28.75, count = 1
+2026-02-13 19:10:54,547 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-13 19:10:54,552 : evaluate.evaluate : INFO : Covariance matrix:
+[0.24151272 0.2390009 ]
+2026-02-13 19:31:38,781 : network.model : INFO : Saved model to logs/LunarLander/Continuous/PPO/v1/model.pt
+2026-02-13 19:31:45,070 : evaluate.evaluate : INFO : Evaluation results: mean = 5.11, std = 0.00, min = 5.11, max = 5.11, count = 1
+2026-02-13 19:31:45,073 : evaluate.evaluate : INFO : Evaluation lengths: mean = 368.00, std = 0.00, min = 368.00, max = 368.00, count = 1
+2026-02-13 19:31:45,076 : evaluate.evaluate : INFO : Covariance matrix:
+[0.18993977 0.14484084]
+2026-02-13 19:50:45,691 : network.model : INFO : Saved model to logs/LunarLander/Continuous/PPO/v1/model.pt
+2026-02-13 19:50:50,722 : evaluate.evaluate : INFO : Evaluation results: mean = 243.60, std = 0.00, min = 243.60, max = 243.60, count = 1
+2026-02-13 19:50:50,730 : evaluate.evaluate : INFO : Evaluation lengths: mean = 281.00, std = 0.00, min = 281.00, max = 281.00, count = 1
+2026-02-13 19:50:50,736 : evaluate.evaluate : INFO : Covariance matrix:
+[0.1699709  0.10469512]
+2026-02-13 20:10:38,184 : network.model : INFO : Saved model to logs/LunarLander/Continuous/PPO/v1/model.pt
+2026-02-13 20:10:42,316 : evaluate.evaluate : INFO : Evaluation results: mean = 269.69, std = 0.00, min = 269.69, max = 269.69, count = 1
+2026-02-13 20:10:42,322 : evaluate.evaluate : INFO : Evaluation lengths: mean = 261.00, std = 0.00, min = 261.00, max = 261.00, count = 1
+2026-02-13 20:10:42,325 : evaluate.evaluate : INFO : Covariance matrix:
+[0.1604821  0.08978564]
+2026-02-13 20:23:35,116 : network.model : INFO : Saved model to logs/LunarLander/Continuous/PPO/v1/model.pt
+2026-02-13 20:23:37,884 : evaluate.evaluate : INFO : Evaluation results: mean = 253.15, std = 0.00, min = 253.15, max = 253.15, count = 1
+2026-02-13 20:23:37,885 : evaluate.evaluate : INFO : Evaluation lengths: mean = 256.00, std = 0.00, min = 256.00, max = 256.00, count = 1
+2026-02-13 20:23:37,886 : evaluate.evaluate : INFO : Covariance matrix:
+[0.15569136 0.08505739]
+2026-02-13 20:30:18,586 : evaluate.evaluate : INFO : Evaluation results: mean = 256.91, std = 44.77, min = 5.01, max = 306.88, count = 1000
+2026-02-13 20:30:18,587 : evaluate.evaluate : INFO : Evaluation lengths: mean = 282.46, std = 131.80, min = 144.00, max = 1000.00, count = 1000
+2026-02-13 20:30:18,589 : evaluate.evaluate : INFO : Covariance matrix:
+[0.15569136 0.08505739]
+2026-02-13 20:30:18,698 : worker.worker : INFO : ==================== End training ====================

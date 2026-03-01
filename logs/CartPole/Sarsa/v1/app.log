@@ -1,0 +1,91 @@
+2026-02-13 17:32:43,576 : worker.worker : INFO : Current device cpu
+2026-02-13 17:32:43,582 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:32:43,582 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:32:43,618 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:32:43,619 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:32:43,632 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:32:43,634 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:32:43,646 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:32:43,648 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:32:43,666 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:32:43,667 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:32:43,691 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:32:43,692 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:32:43,709 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:32:43,710 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:32:43,727 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:32:43,729 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:32:43,745 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -100 0.0
+2026-02-13 17:32:43,746 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [-0.01, 0, -10, 0] [-1, 0, -10, 0] None 1
+2026-02-13 17:32:47,404 : worker.worker : INFO : ==================== Start training ====================
+2026-02-13 17:32:47,435 : network.model : INFO : Saved model to logs/CartPole/Sarsa/v1/model.pt
+2026-02-13 17:32:48,357 : evaluate.evaluate : INFO : Evaluation results: mean = 15.00, std = 0.00, min = 15.00, max = 15.00, count = 1
+2026-02-13 17:32:48,357 : evaluate.evaluate : INFO : Evaluation lengths: mean = 15.00, std = 0.00, min = 15.00, max = 15.00, count = 1
+2026-02-13 17:32:53,355 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.9
+2026-02-13 17:32:57,809 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.81
+2026-02-13 17:33:02,548 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.7290000000000001
+2026-02-13 17:33:08,616 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.6561000000000001
+2026-02-13 17:33:13,460 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.5904900000000002
+2026-02-13 17:33:22,220 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.5314410000000002
+2026-02-13 17:33:26,739 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.47829690000000014
+2026-02-13 17:33:31,511 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.43046721000000016
+2026-02-13 17:33:34,814 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.38742048900000015
+2026-02-13 17:33:39,604 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.34867844010000015
+2026-02-13 17:33:39,644 : network.model : INFO : Saved model to logs/CartPole/Sarsa/v1/model.pt
+2026-02-13 17:33:40,288 : evaluate.evaluate : INFO : Evaluation results: mean = 32.00, std = 0.00, min = 32.00, max = 32.00, count = 1
+2026-02-13 17:33:40,289 : evaluate.evaluate : INFO : Evaluation lengths: mean = 32.00, std = 0.00, min = 32.00, max = 32.00, count = 1
+2026-02-13 17:33:48,433 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.31381059609000017
+2026-02-13 17:33:53,247 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.28242953648100017
+2026-02-13 17:33:57,620 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.25418658283290013
+2026-02-13 17:34:01,367 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.22876792454961012
+2026-02-13 17:34:05,661 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.2058911320946491
+2026-02-13 17:34:10,145 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.1853020188851842
+2026-02-13 17:34:21,295 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.16677181699666577
+2026-02-13 17:34:27,403 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.1500946352969992
+2026-02-13 17:34:30,312 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.13508517176729928
+2026-02-13 17:34:34,704 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.12157665459056936
+2026-02-13 17:34:34,743 : network.model : INFO : Saved model to logs/CartPole/Sarsa/v1/model.pt
+2026-02-13 17:34:35,692 : evaluate.evaluate : INFO : Evaluation results: mean = 80.00, std = 0.00, min = 80.00, max = 80.00, count = 1
+2026-02-13 17:34:35,692 : evaluate.evaluate : INFO : Evaluation lengths: mean = 80.00, std = 0.00, min = 80.00, max = 80.00, count = 1
+2026-02-13 17:34:40,803 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.10941898913151243
+2026-02-13 17:34:47,014 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.0984770902183612
+2026-02-13 17:34:54,415 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.08862938119652508
+2026-02-13 17:34:58,938 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.07976644307687257
+2026-02-13 17:35:01,088 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.07178979876918531
+2026-02-13 17:35:05,272 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.06461081889226679
+2026-02-13 17:35:09,735 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.05814973700304011
+2026-02-13 17:35:14,046 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.0523347633027361
+2026-02-13 17:35:22,172 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.04710128697246249
+2026-02-13 17:35:27,085 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.042391158275216244
+2026-02-13 17:35:27,134 : network.model : INFO : Saved model to logs/CartPole/Sarsa/v1/model.pt
+2026-02-13 17:35:29,791 : evaluate.evaluate : INFO : Evaluation results: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:35:29,791 : evaluate.evaluate : INFO : Evaluation lengths: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:35:37,431 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.03815204244769462
+2026-02-13 17:35:43,688 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.03433683820292516
+2026-02-13 17:35:52,746 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.030903154382632643
+2026-02-13 17:35:55,664 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02781283894436938
+2026-02-13 17:36:01,718 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.025031555049932444
+2026-02-13 17:36:08,148 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.0225283995449392
+2026-02-13 17:36:12,848 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.020275559590445278
+2026-02-13 17:36:20,335 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:36:23,733 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:36:29,712 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:36:29,750 : network.model : INFO : Saved model to logs/CartPole/Sarsa/v1/model.pt
+2026-02-13 17:36:34,127 : evaluate.evaluate : INFO : Evaluation results: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:36:34,128 : evaluate.evaluate : INFO : Evaluation lengths: mean = 500.00, std = 0.00, min = 500.00, max = 500.00, count = 1
+2026-02-13 17:36:44,990 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:36:51,628 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:36:56,589 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:37:03,534 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:37:14,001 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:37:26,208 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:37:35,376 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:37:40,793 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:37:45,925 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:37:53,618 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.02
+2026-02-13 17:37:53,625 : network.model : INFO : Saved model to logs/CartPole/Sarsa/v1/model.pt
+2026-02-13 17:37:55,527 : evaluate.evaluate : INFO : Evaluation results: mean = 124.00, std = 0.00, min = 124.00, max = 124.00, count = 1
+2026-02-13 17:37:55,528 : evaluate.evaluate : INFO : Evaluation lengths: mean = 124.00, std = 0.00, min = 124.00, max = 124.00, count = 1
+2026-02-13 17:41:00,655 : evaluate.evaluate : INFO : Evaluation results: mean = 132.99, std = 66.08, min = 31.00, max = 347.00, count = 1000
+2026-02-13 17:41:00,657 : evaluate.evaluate : INFO : Evaluation lengths: mean = 132.99, std = 66.08, min = 31.00, max = 347.00, count = 1000
+2026-02-13 17:41:00,805 : worker.worker : INFO : ==================== End training ====================

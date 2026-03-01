@@ -1,0 +1,85 @@
+2026-02-15 14:44:37,325 : worker.worker : INFO : Current device cuda
+2026-02-15 14:44:37,448 : OpenGL.platform.ctypesloader : DEBUG : Loaded libEGL.so => libEGL.so <CDLL 'libEGL.so', handle 16571690 at 0x7f7ab05d0470>
+2026-02-15 14:44:37,448 : OpenGL.platform.ctypesloader : DEBUG : Loaded libOpenGL.so => libOpenGL.so <CDLL 'libOpenGL.so', handle 16572d20 at 0x7f7ab059e7b0>
+2026-02-15 14:44:37,450 : OpenGL.acceleratesupport : DEBUG : OpenGL_accelerate module loaded
+2026-02-15 14:44:37,456 : OpenGL.arrays.arraydatatype : DEBUG : Using accelerated ArrayDatatype
+2026-02-15 14:44:37,463 : OpenGL.platform.ctypesloader : DEBUG : Loaded libOpenGL.so => libOpenGL.so <CDLL 'libOpenGL.so', handle 16572d20 at 0x7f7ab0283980>
+2026-02-15 14:44:38,915 : worker.worker : INFO : ==================== Start training ====================
+2026-02-15 14:44:39,254 : network.model : INFO : Saved model to logs/Swimmer/Swimmer/v1/model.pt
+2026-02-15 14:44:45,482 : evaluate.evaluate : INFO : Final state tensor([ 0.9092,  0.0995, -1.7411, -0.3687,  0.3876, -0.6019,  0.8983,  0.2521])
+2026-02-15 14:44:45,483 : evaluate.evaluate : INFO : Evaluation results: mean = -9.36, std = 0.00, min = -9.36, max = -9.36, count = 1
+2026-02-15 14:44:45,483 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-15 14:44:45,485 : evaluate.evaluate : INFO : Covariance matrix:
+[0.31622776 0.31622776]
+2026-02-15 15:02:42,660 : network.model : INFO : Saved model to logs/Swimmer/Swimmer/v1/model.pt
+2026-02-15 15:02:48,392 : evaluate.evaluate : INFO : Final state tensor([ 2.6619e+00, -1.7463e+00, -9.1674e-01,  1.0390e-03,  6.7865e-03,
+         1.2013e-02, -1.9582e-03, -3.0327e-02])
+2026-02-15 15:02:48,392 : evaluate.evaluate : INFO : Evaluation results: mean = 45.67, std = 0.00, min = 45.67, max = 45.67, count = 1
+2026-02-15 15:02:48,392 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-15 15:02:48,393 : evaluate.evaluate : INFO : Covariance matrix:
+[0.25763768 0.21467073]
+2026-02-15 15:20:51,970 : network.model : INFO : Saved model to logs/Swimmer/Swimmer/v1/model.pt
+2026-02-15 15:20:57,511 : evaluate.evaluate : INFO : Final state tensor([ 2.4961, -1.7463, -1.2657, -0.0166,  0.0312,  0.0666,  0.0108, -0.2975])
+2026-02-15 15:20:57,511 : evaluate.evaluate : INFO : Evaluation results: mean = 47.02, std = 0.00, min = 47.02, max = 47.02, count = 1
+2026-02-15 15:20:57,512 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-15 15:20:57,513 : evaluate.evaluate : INFO : Covariance matrix:
+[0.2730452  0.16498546]
+2026-02-15 15:39:53,640 : network.model : INFO : Saved model to logs/Swimmer/Swimmer/v1/model.pt
+2026-02-15 15:39:59,826 : evaluate.evaluate : INFO : Final state tensor([ 2.5585, -1.7463, -1.2648, -0.0102,  0.0190,  0.0430,  0.0048, -0.1858])
+2026-02-15 15:39:59,827 : evaluate.evaluate : INFO : Evaluation results: mean = 45.68, std = 0.00, min = 45.68, max = 45.68, count = 1
+2026-02-15 15:39:59,827 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-15 15:39:59,828 : evaluate.evaluate : INFO : Covariance matrix:
+[0.328016   0.14474355]
+2026-02-15 15:59:29,827 : network.model : INFO : Saved model to logs/Swimmer/Swimmer/v1/model.pt
+2026-02-15 15:59:36,090 : evaluate.evaluate : INFO : Final state tensor([ 2.4748, -1.7462, -1.0571, -0.0084,  0.0376,  0.0742,  0.0151, -0.3163])
+2026-02-15 15:59:36,091 : evaluate.evaluate : INFO : Evaluation results: mean = 46.26, std = 0.00, min = 46.26, max = 46.26, count = 1
+2026-02-15 15:59:36,091 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-15 15:59:36,092 : evaluate.evaluate : INFO : Covariance matrix:
+[0.31505263 0.07588376]
+2026-02-15 16:19:19,851 : network.model : INFO : Saved model to logs/Swimmer/Swimmer/v1/model.pt
+2026-02-15 16:19:25,879 : evaluate.evaluate : INFO : Final state tensor([ 2.6185e+00, -1.7464e+00, -1.0831e+00,  3.0443e-02, -4.7366e-03,
+        -2.8925e-02,  1.8558e-03,  1.3524e-01])
+2026-02-15 16:19:25,880 : evaluate.evaluate : INFO : Evaluation results: mean = 57.53, std = 0.00, min = 57.53, max = 57.53, count = 1
+2026-02-15 16:19:25,880 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-15 16:19:25,881 : evaluate.evaluate : INFO : Covariance matrix:
+[0.29563296 0.04666277]
+2026-02-15 16:39:01,627 : network.model : INFO : Saved model to logs/Swimmer/Swimmer/v1/model.pt
+2026-02-15 16:39:07,830 : evaluate.evaluate : INFO : Final state tensor([ 2.6603e+00, -1.7465e+00, -9.4647e-01,  4.4995e-02, -4.4033e-03,
+        -2.8943e-02,  5.6539e-04,  1.1280e-01])
+2026-02-15 16:39:07,830 : evaluate.evaluate : INFO : Evaluation results: mean = 74.24, std = 0.00, min = 74.24, max = 74.24, count = 1
+2026-02-15 16:39:07,831 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-15 16:39:07,831 : evaluate.evaluate : INFO : Covariance matrix:
+[0.25674894 0.03229304]
+2026-02-15 16:58:57,734 : network.model : INFO : Saved model to logs/Swimmer/Swimmer/v1/model.pt
+2026-02-15 16:59:03,839 : evaluate.evaluate : INFO : Final state tensor([ 2.5806e+00, -1.7465e+00, -8.3278e-01,  4.2980e-02, -1.9016e-02,
+        -4.9435e-02, -5.6445e-04,  1.9243e-01])
+2026-02-15 16:59:03,840 : evaluate.evaluate : INFO : Evaluation results: mean = 75.67, std = 0.00, min = 75.67, max = 75.67, count = 1
+2026-02-15 16:59:03,840 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-15 16:59:03,841 : evaluate.evaluate : INFO : Covariance matrix:
+[0.25942025 0.02901693]
+2026-02-15 17:18:42,004 : network.model : INFO : Saved model to logs/Swimmer/Swimmer/v1/model.pt
+2026-02-15 17:18:48,146 : evaluate.evaluate : INFO : Final state tensor([ 2.5877, -1.5846, -1.2437,  0.7985,  0.8839,  1.7259, -2.0722,  0.2589])
+2026-02-15 17:18:48,147 : evaluate.evaluate : INFO : Evaluation results: mean = 79.55, std = 0.00, min = 79.55, max = 79.55, count = 1
+2026-02-15 17:18:48,147 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-15 17:18:48,148 : evaluate.evaluate : INFO : Covariance matrix:
+[0.24585345 0.03018995]
+2026-02-15 17:38:33,728 : network.model : INFO : Saved model to logs/Swimmer/Swimmer/v1/model.pt
+2026-02-15 17:38:39,889 : evaluate.evaluate : INFO : Final state tensor([ 2.6754e+00, -1.7465e+00, -1.2688e+00,  7.5372e-02,  3.2893e-03,
+        -3.9756e-02, -2.6033e-04,  1.2500e-01])
+2026-02-15 17:38:39,889 : evaluate.evaluate : INFO : Evaluation results: mean = 75.77, std = 0.00, min = 75.77, max = 75.77, count = 1
+2026-02-15 17:38:39,889 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-15 17:38:39,890 : evaluate.evaluate : INFO : Covariance matrix:
+[0.2363854  0.02843839]
+2026-02-15 17:58:28,719 : network.model : INFO : Saved model to logs/Swimmer/Swimmer/v1/model.pt
+2026-02-15 17:58:34,919 : evaluate.evaluate : INFO : Final state tensor([ 2.5774e+00, -1.7465e+00, -1.0654e+00,  5.4059e-02, -2.3830e-02,
+        -6.1870e-02, -1.2357e-03,  2.3568e-01])
+2026-02-15 17:58:34,919 : evaluate.evaluate : INFO : Evaluation results: mean = 81.01, std = 0.00, min = 81.01, max = 81.01, count = 1
+2026-02-15 17:58:34,919 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-15 17:58:34,920 : evaluate.evaluate : INFO : Covariance matrix:
+[0.22536738 0.02656363]
+2026-02-15 18:08:11,268 : evaluate.evaluate : INFO : Final state tensor([ 2.5409, -1.7335, -1.1069, -0.0983, -0.0861, -0.2223,  0.3464, -0.2689])
+2026-02-15 18:08:11,269 : evaluate.evaluate : INFO : Evaluation results: mean = 78.49, std = 2.55, min = 68.90, max = 85.06, count = 1000
+2026-02-15 18:08:11,269 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1000
+2026-02-15 18:08:11,269 : evaluate.evaluate : INFO : Covariance matrix:
+[0.22536738 0.02656363]
+2026-02-15 18:08:11,319 : worker.worker : INFO : ==================== End training ====================

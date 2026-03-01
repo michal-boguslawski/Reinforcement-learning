@@ -1,0 +1,24 @@
+# PPO
+policy:
+  type: ppo
+  kwargs:
+    gamma: 0.995
+    lambda_: 0.95
+    value_loss_coef: 0.5
+    entropy_coef: 0.001
+    entropy_decay: 0.99
+    lr: 0.0003
+    num_epochs: 10
+    clip_epsilon: 0.2
+    exploration_method: distribution
+    advantage_normalize: global
+
+network:
+  kwargs:
+    initial_log_std: 0.
+    num_features: 64
+    backbone_name: mlp
+    feature_extractor_name: shared
+    head_name: actor_critic
+    policy_name: actor_critic
+    distribution: normal

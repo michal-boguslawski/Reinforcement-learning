@@ -1,0 +1,73 @@
+env_kwargs:
+  general_wrappers: {}
+  id: MountainCarContinuous-v0
+  normalize_rewards: false
+  num_envs: 8
+  training_wrappers:
+    action_reward:
+      pow_factors:
+      - -1.0
+    clip_reward:
+      max_reward: 50.0
+    power_obs_reward:
+      abs_factors:
+      - 0
+      - 10.0
+      decay_factor: 0.5
+      pow_factors:
+      - 0
+      - 100
+    scale_reward:
+      loc_factor: 0.0
+      scale_factor: 0.1
+    terminal_bonus:
+      truncated_bonus: -5
+  vectorization_mode: async
+env_name: MountainCarContinuous
+experiment_name: PPO/v4
+network:
+  kwargs:
+    backbone_kwargs: {}
+    backbone_name: mlp
+    core_kwargs: {}
+    core_name: identity
+    distribution: normal
+    head_kwargs: {}
+    head_name: actor_critic
+    initial_deviation: 1.0
+    num_features: 16
+policy:
+  kwargs:
+    advantage_normalize: batch
+    clip_epsilon: 0.2
+    entropy_kwargs:
+      max_entropy: 0.02
+      min_entropy: 0.0001
+      scheduler_type: linear_entropy
+      total_steps: 50
+    exploration_method:
+      kwargs: {}
+      name: distribution
+    gamma: 0.995
+    lambda_: 0.975
+    num_epochs: 6
+    optimizer_kwargs:
+      actor_lr: 0.0003
+      critic_lr: 0.001
+    returns_normalize: false
+    scheduler_kwargs:
+      end_factor: 0.0001
+      scheduler_type: linear_lr
+      start_factor: 1.0
+      total_iters: 1000
+    value_loss_coef: 0.5
+  type: ppo
+train_kwargs:
+  batch_size: 1024
+  minibatch_size: 128
+  num_steps: 100000
+worker_kwargs:
+  device: auto
+  record_step: 20000
+  temperature_config: {}
+  verbose: 1

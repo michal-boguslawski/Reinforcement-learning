@@ -1,0 +1,91 @@
+2026-02-12 18:24:05,167 : worker.worker : INFO : Current device cpu
+2026-02-12 18:24:05,171 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:24:05,172 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:24:05,199 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:24:05,202 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:24:05,214 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:24:05,216 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:24:05,224 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:24:05,226 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:24:05,249 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:24:05,250 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:24:05,252 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:24:05,252 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:24:05,267 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:24:05,268 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:24:05,293 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:24:05,294 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:24:05,304 : envs.wrappers : INFO : TerminalBonusWrapper attached with params 100 0.0
+2026-02-12 18:24:05,306 : envs.wrappers : INFO : PowerObsRewardWrapper attached with params [0, 0, 0, 0, 0.01, 0.01] None None 1
+2026-02-12 18:24:07,328 : worker.worker : INFO : ==================== Start training ====================
+2026-02-12 18:24:07,365 : network.model : INFO : Saved model to logs/Acrobot/Sarsa/v1/model.pt
+2026-02-12 18:24:09,777 : evaluate.evaluate : INFO : Evaluation results: mean = -246.00, std = 0.00, min = -246.00, max = -246.00, count = 1
+2026-02-12 18:24:09,778 : evaluate.evaluate : INFO : Evaluation lengths: mean = 247.00, std = 0.00, min = 247.00, max = 247.00, count = 1
+2026-02-12 18:24:16,831 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.95
+2026-02-12 18:24:26,885 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.9025
+2026-02-12 18:24:36,513 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.8573749999999999
+2026-02-12 18:24:41,996 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.8145062499999999
+2026-02-12 18:24:48,689 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.7737809374999999
+2026-02-12 18:24:58,834 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.7350918906249998
+2026-02-12 18:25:06,789 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.6983372960937497
+2026-02-12 18:25:14,499 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.6634204312890623
+2026-02-12 18:25:20,921 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.6302494097246091
+2026-02-12 18:25:30,803 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.5987369392383786
+2026-02-12 18:25:30,848 : network.model : INFO : Saved model to logs/Acrobot/Sarsa/v1/model.pt
+2026-02-12 18:25:36,567 : evaluate.evaluate : INFO : Evaluation results: mean = -421.00, std = 0.00, min = -421.00, max = -421.00, count = 1
+2026-02-12 18:25:36,568 : evaluate.evaluate : INFO : Evaluation lengths: mean = 422.00, std = 0.00, min = 422.00, max = 422.00, count = 1
+2026-02-12 18:25:46,053 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.5688000922764596
+2026-02-12 18:25:55,104 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.5403600876626365
+2026-02-12 18:26:06,604 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.5133420832795047
+2026-02-12 18:26:16,764 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.48767497911552943
+2026-02-12 18:26:28,814 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.46329123015975293
+2026-02-12 18:26:38,127 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.44012666865176525
+2026-02-12 18:26:45,026 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.41812033521917696
+2026-02-12 18:26:51,995 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.3972143184582181
+2026-02-12 18:27:02,299 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.37735360253530714
+2026-02-12 18:27:09,633 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.35848592240854177
+2026-02-12 18:27:09,687 : network.model : INFO : Saved model to logs/Acrobot/Sarsa/v1/model.pt
+2026-02-12 18:27:13,364 : evaluate.evaluate : INFO : Evaluation results: mean = -353.00, std = 0.00, min = -353.00, max = -353.00, count = 1
+2026-02-12 18:27:13,365 : evaluate.evaluate : INFO : Evaluation lengths: mean = 354.00, std = 0.00, min = 354.00, max = 354.00, count = 1
+2026-02-12 18:27:22,299 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.34056162628811465
+2026-02-12 18:27:34,407 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.3235335449737089
+2026-02-12 18:27:39,567 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.30735686772502346
+2026-02-12 18:27:47,788 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.2919890243387723
+2026-02-12 18:27:57,168 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.27738957312183365
+2026-02-12 18:28:03,170 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.263520094465742
+2026-02-12 18:28:10,407 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.25034408974245487
+2026-02-12 18:28:18,028 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.2378268852553321
+2026-02-12 18:28:27,511 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.2259355409925655
+2026-02-12 18:28:35,189 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.2146387639429372
+2026-02-12 18:28:35,221 : network.model : INFO : Saved model to logs/Acrobot/Sarsa/v1/model.pt
+2026-02-12 18:28:36,773 : evaluate.evaluate : INFO : Evaluation results: mean = -137.00, std = 0.00, min = -137.00, max = -137.00, count = 1
+2026-02-12 18:28:36,774 : evaluate.evaluate : INFO : Evaluation lengths: mean = 138.00, std = 0.00, min = 138.00, max = 138.00, count = 1
+2026-02-12 18:28:48,899 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.20390682574579033
+2026-02-12 18:28:59,529 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.1937114844585008
+2026-02-12 18:29:06,852 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.18402591023557577
+2026-02-12 18:29:15,539 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.17482461472379698
+2026-02-12 18:29:23,602 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.16608338398760714
+2026-02-12 18:29:32,455 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.15777921478822676
+2026-02-12 18:29:42,417 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.14989025404881542
+2026-02-12 18:29:52,328 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.14239574134637464
+2026-02-12 18:29:59,887 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.1352759542790559
+2026-02-12 18:30:06,561 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.1285121565651031
+2026-02-12 18:30:06,600 : network.model : INFO : Saved model to logs/Acrobot/Sarsa/v1/model.pt
+2026-02-12 18:30:07,736 : evaluate.evaluate : INFO : Evaluation results: mean = -97.00, std = 0.00, min = -97.00, max = -97.00, count = 1
+2026-02-12 18:30:07,736 : evaluate.evaluate : INFO : Evaluation lengths: mean = 98.00, std = 0.00, min = 98.00, max = 98.00, count = 1
+2026-02-12 18:30:18,381 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.12208654873684793
+2026-02-12 18:30:25,120 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.11598222130000553
+2026-02-12 18:30:32,372 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.11018311023500525
+2026-02-12 18:30:39,827 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.10467395472325498
+2026-02-12 18:30:48,291 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.09944025698709223
+2026-02-12 18:30:56,260 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.09446824413773762
+2026-02-12 18:31:05,132 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.08974483193085074
+2026-02-12 18:31:12,510 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.0852575903343082
+2026-02-12 18:31:20,437 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.08099471081759278
+2026-02-12 18:31:26,954 : agent.exploration.egreedy : DEBUG : Current epsilon for egreedy 0.07694497527671314
+2026-02-12 18:31:26,963 : network.model : INFO : Saved model to logs/Acrobot/Sarsa/v1/model.pt
+2026-02-12 18:31:28,437 : evaluate.evaluate : INFO : Evaluation results: mean = -62.00, std = 0.00, min = -62.00, max = -62.00, count = 1
+2026-02-12 18:31:28,438 : evaluate.evaluate : INFO : Evaluation lengths: mean = 63.00, std = 0.00, min = 63.00, max = 63.00, count = 1
+2026-02-12 18:32:27,957 : evaluate.evaluate : INFO : Evaluation results: mean = -87.45, std = 30.06, min = -500.00, max = -60.00, count = 1000
+2026-02-12 18:32:27,957 : evaluate.evaluate : INFO : Evaluation lengths: mean = 88.45, std = 30.04, min = 61.00, max = 500.00, count = 1000
+2026-02-12 18:32:28,018 : worker.worker : INFO : ==================== End training ====================

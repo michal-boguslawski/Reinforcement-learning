@@ -1,0 +1,80 @@
+2026-02-21 21:52:41,172 : worker.worker : INFO : Current device cuda
+2026-02-21 21:52:41,322 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.0001, 0.002, 0.0] 0.99
+2026-02-21 21:52:41,323 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-21 21:52:41,343 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.0001, 0.002, 0.0] 0.99
+2026-02-21 21:52:41,343 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-21 21:52:41,349 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.0001, 0.002, 0.0] 0.99
+2026-02-21 21:52:41,349 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-21 21:52:41,355 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.0001, 0.002, 0.0] 0.99
+2026-02-21 21:52:41,356 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-21 21:52:41,358 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.0001, 0.002, 0.0] 0.99
+2026-02-21 21:52:41,358 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-21 21:52:41,362 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.0001, 0.002, 0.0] 0.99
+2026-02-21 21:52:41,363 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-21 21:52:41,366 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.0001, 0.002, 0.0] 0.99
+2026-02-21 21:52:41,366 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-21 21:52:41,369 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.0001, 0.002, 0.0] 0.99
+2026-02-21 21:52:41,370 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-21 21:52:41,374 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.0001, 0.002, 0.0] 0.99
+2026-02-21 21:52:41,374 : envs.wrappers : INFO : OutOfTrackPenaltyAndTerminationWrapper attached with penalty 1.0
+2026-02-21 21:52:42,990 : worker.worker : INFO : ==================== Start training ====================
+2026-02-21 21:52:43,407 : network.model : INFO : Saved model to logs/CarRacing/PPO/v1/model.pt
+2026-02-21 21:53:03,581 : evaluate.evaluate : INFO : Evaluation results: mean = -25.80, std = 0.00, min = -25.80, max = -25.80, count = 1
+2026-02-21 21:53:03,582 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-21 21:53:03,584 : evaluate.evaluate : INFO : Covariance matrix:
+[0.18973666 0.18973666 0.18973666]
+2026-02-21 22:34:39,694 : network.model : INFO : Saved model to logs/CarRacing/PPO/v1/model.pt
+2026-02-21 22:35:00,245 : evaluate.evaluate : INFO : Evaluation results: mean = -10.89, std = 0.00, min = -10.89, max = -10.89, count = 1
+2026-02-21 22:35:00,246 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-21 22:35:00,247 : evaluate.evaluate : INFO : Covariance matrix:
+[0.19057132 0.16540812 0.18752588]
+2026-02-21 23:16:57,491 : network.model : INFO : Saved model to logs/CarRacing/PPO/v1/model.pt
+2026-02-21 23:17:18,303 : evaluate.evaluate : INFO : Evaluation results: mean = 219.75, std = 0.00, min = 219.75, max = 219.75, count = 1
+2026-02-21 23:17:18,304 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-21 23:17:18,305 : evaluate.evaluate : INFO : Covariance matrix:
+[0.19041304 0.16859716 0.15934104]
+2026-02-21 23:59:12,242 : network.model : INFO : Saved model to logs/CarRacing/PPO/v1/model.pt
+2026-02-21 23:59:32,402 : evaluate.evaluate : INFO : Evaluation results: mean = 85.31, std = 0.00, min = 85.31, max = 85.31, count = 1
+2026-02-21 23:59:32,402 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-21 23:59:32,404 : evaluate.evaluate : INFO : Covariance matrix:
+[0.17023805 0.16913715 0.15563372]
+2026-02-22 00:41:35,979 : network.model : INFO : Saved model to logs/CarRacing/PPO/v1/model.pt
+2026-02-22 00:41:57,164 : evaluate.evaluate : INFO : Evaluation results: mean = 709.35, std = 0.00, min = 709.35, max = 709.35, count = 1
+2026-02-22 00:41:57,165 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-22 00:41:57,167 : evaluate.evaluate : INFO : Covariance matrix:
+[0.1542885  0.15927929 0.14242321]
+2026-02-22 01:23:22,037 : network.model : INFO : Saved model to logs/CarRacing/PPO/v1/model.pt
+2026-02-22 01:23:41,718 : evaluate.evaluate : INFO : Evaluation results: mean = -72.22, std = 0.00, min = -72.22, max = -72.22, count = 1
+2026-02-22 01:23:41,719 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-22 01:23:41,720 : evaluate.evaluate : INFO : Covariance matrix:
+[0.15635303 0.164784   0.13920994]
+2026-02-22 02:04:21,838 : network.model : INFO : Saved model to logs/CarRacing/PPO/v1/model.pt
+2026-02-22 02:04:42,750 : evaluate.evaluate : INFO : Evaluation results: mean = -82.58, std = 0.00, min = -82.58, max = -82.58, count = 1
+2026-02-22 02:04:42,750 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-22 02:04:42,752 : evaluate.evaluate : INFO : Covariance matrix:
+[2.3366246  0.24320623 0.18609814]
+2026-02-22 02:48:07,677 : network.model : INFO : Saved model to logs/CarRacing/PPO/v1/model.pt
+2026-02-22 02:48:29,416 : evaluate.evaluate : INFO : Evaluation results: mean = -62.07, std = 0.00, min = -62.07, max = -62.07, count = 1
+2026-02-22 02:48:29,417 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-22 02:48:29,419 : evaluate.evaluate : INFO : Covariance matrix:
+[2.3366246  0.2362422  0.17686662]
+2026-02-22 03:33:30,279 : network.model : INFO : Saved model to logs/CarRacing/PPO/v1/model.pt
+2026-02-22 03:33:51,856 : evaluate.evaluate : INFO : Evaluation results: mean = -86.58, std = 0.00, min = -86.58, max = -86.58, count = 1
+2026-02-22 03:33:51,856 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-22 03:33:51,858 : evaluate.evaluate : INFO : Covariance matrix:
+[2.3366246  0.23381305 0.17270346]
+2026-02-22 04:17:20,708 : network.model : INFO : Saved model to logs/CarRacing/PPO/v1/model.pt
+2026-02-22 04:17:42,951 : evaluate.evaluate : INFO : Evaluation results: mean = -85.92, std = 0.00, min = -85.92, max = -85.92, count = 1
+2026-02-22 04:17:42,952 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-22 04:17:42,953 : evaluate.evaluate : INFO : Covariance matrix:
+[2.3366246  0.23274685 0.17224629]
+2026-02-22 05:01:41,587 : network.model : INFO : Saved model to logs/CarRacing/PPO/v1/model.pt
+2026-02-22 05:02:01,993 : evaluate.evaluate : INFO : Evaluation results: mean = -81.55, std = 0.00, min = -81.55, max = -81.55, count = 1
+2026-02-22 05:02:01,994 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1
+2026-02-22 05:02:01,995 : evaluate.evaluate : INFO : Covariance matrix:
+[2.3366246  0.23187248 0.17156687]
+2026-02-22 05:44:39,657 : evaluate.evaluate : INFO : Evaluation results: mean = -83.57, std = 1.71, min = -88.67, max = -79.08, count = 1000
+2026-02-22 05:44:39,657 : evaluate.evaluate : INFO : Evaluation lengths: mean = 1000.00, std = 0.00, min = 1000.00, max = 1000.00, count = 1000
+2026-02-22 05:44:39,658 : evaluate.evaluate : INFO : Covariance matrix:
+[2.3366246  0.23187248 0.17156687]
+2026-02-22 05:44:39,736 : worker.worker : INFO : ==================== End training ====================

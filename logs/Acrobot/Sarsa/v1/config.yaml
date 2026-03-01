@@ -1,0 +1,54 @@
+env_kwargs:
+  general_wrappers: {}
+  id: Acrobot-v1
+  normalize_rewards: false
+  num_envs: 8
+  training_wrappers:
+    power_obs_reward:
+      pow_factors:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0.01
+      - 0.01
+    terminal_bonus:
+      terminated_bonus: 100
+  vectorization_mode: async
+env_name: Acrobot
+experiment_name: Sarsa/v1
+network:
+  kwargs:
+    backbone_kwargs: {}
+    backbone_name: mlp
+    core_kwargs: {}
+    core_name: identity
+    distribution: categorical
+    head_kwargs: {}
+    head_name: actor
+    initial_deviation: 1.0
+    num_features: 16
+policy:
+  kwargs:
+    exploration_method:
+      kwargs:
+        decay_step_: 1000
+        epsilon_decay_: 0.95
+        epsilon_start_: 1.0
+        min_epsilon_: 0.02
+      name: egreedy
+    gamma: 0.99
+    lambda_: 1.0
+    optimizer_kwargs:
+      lr: 0.0003
+    returns_normalize: false
+  type: sarsa
+train_kwargs:
+  batch_size: 8
+  minibatch_size: 16
+  num_steps: 50000
+worker_kwargs:
+  device: auto
+  record_step: 10000
+  temperature_config: {}
+  verbose: 1

@@ -1,0 +1,69 @@
+env_kwargs:
+  general_wrappers:
+    rescale_observation:
+      max_obs: 1.0
+      min_obs: 0.0
+  id: CarRacing-v3
+  normalize_rewards: false
+  num_envs: 8
+  permute_observations: true
+  training_wrappers:
+    out_of_track:
+      out_of_track_penalty: 1.0
+      terminate_after: 10
+    scale_reward:
+      loc_factor: -0.01
+      scale_factor: 0.2
+  vectorization_mode: async
+env_name: CarRacing
+experiment_name: PPO/v5
+network:
+  kwargs:
+    backbone_kwargs: {}
+    backbone_name: simple_cnn
+    core_kwargs: {}
+    core_name: gru
+    distribution: normal
+    head_kwargs:
+      activation_fn: relu
+      hidden_dim: 128
+    head_name: actor_critic
+    initial_deviation: 0.6
+    num_features: 128
+    weights_kwargs:
+      file_path: /app/rl_agents/logs/CarRacing/PPO/v4/model.pt
+      strict: true
+policy:
+  kwargs:
+    advantage_normalize: batch
+    clip_epsilon: 0.2
+    entropy_kwargs:
+      max_entropy: 0.0
+      min_entropy: 0.0
+      scheduler_type: linear_entropy
+      total_steps: 600
+    exploration_method:
+      kwargs: {}
+      name: distribution
+    gamma: 0.99
+    lambda_: 0.95
+    num_epochs: 6
+    optimizer_kwargs:
+      actor_lr: 8.0e-05
+      critic_lr: 0.00012
+    scheduler_kwargs:
+      max_lr: 0.0001
+      scheduler_type: one_cycle_lr
+      total_steps: 2000
+    use_value_clipping: absolute
+    value_loss_coef: 0.5
+  type: ppo
+train_kwargs:
+  batch_size: 512
+  minibatch_size: 256
+  num_steps: 1000000
+worker_kwargs:
+  device: auto
+  record_step: 100000
+  temperature_config: {}
+  verbose: 1
