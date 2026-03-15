@@ -52,7 +52,7 @@ class PPOPolicy(OnPolicy, EntropyMixin):
     ):
         log_probs = dist.log_prob(actions.squeeze(-1) if self.action_space_type == "discrete" else actions)
         log_ratio = log_probs - old_log_probs.detach()
-        log_ratio = T.clamp(log_ratio, -10, 10)
+        log_ratio = T.clamp(log_ratio, -5, 2)
         r_t = T.exp(log_ratio)
         r_t = r_t.sum(-1) if r_t.ndim > 1 else r_t
 
