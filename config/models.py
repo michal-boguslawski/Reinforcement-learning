@@ -25,6 +25,8 @@ class OptimizerConfig(BaseModel):
     lr: float | None = None
     actor_lr: float | None = None
     critic_lr: float | None = None
+    core_lr: float | None = None
+    log_std_lr: float | None = None
 
 
 class EntropyConfig(BaseModel):

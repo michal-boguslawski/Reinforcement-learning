@@ -1,0 +1,134 @@
+env_kwargs:
+  general_wrappers: {}
+  hardcore: true
+  id: BipedalWalker-v3
+  normalize_rewards: false
+  num_envs: 8
+  permute_observations: false
+  training_wrappers:
+    action_reward:
+      abs_factors:
+      - 0.002
+      - 0.001
+      - 0.002
+      - 0.001
+      pow_factors:
+      - -0.001
+      - -0.002
+      - -0.01
+      - -0.002
+    clip_reward:
+      min_reward: -50.0
+    no_movement_truncate:
+      eps: 0.01
+      index: 2
+      penalty: 2.0
+    observations_interaction:
+      factors:
+        (5, 10): -0.2
+    power_obs_reward:
+      abs_factors:
+      - -0.01
+      - -0.005
+      - 0.0
+      - -0.002
+      - -0.001
+      - 0.001
+      - 0
+      - 0
+      - 0
+      - -0.001
+      - 0.001
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      nominal_factors:
+      - 0.0
+      - 0.0
+      - 0.02
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0
+      - 0
+      - 0.001
+      - 0.0
+      - 0.0
+      - 0
+      - 0
+      - 0.001
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    scale_reward:
+      loc_factor: 0.0
+      scale_factor: 0.2
+    terminal_bonus:
+      truncated_bonus: -1.0
+  vectorization_mode: async
+env_name: BipedalWalkerHardcore
+experiment_name: PPO/v7
+network:
+  kwargs:
+    backbone_kwargs:
+      hidden_dims: 128
+    backbone_name: mlp
+    core_kwargs:
+      hidden_dims: 256
+    core_name: gru
+    distribution: normal
+    head_kwargs: {}
+    head_name: actor_critic
+    initial_deviation: 0.6
+    num_features: 128
+policy:
+  kwargs:
+    advantage_normalize: batch
+    clip_epsilon: 0.2
+    entropy_kwargs:
+      max_entropy: 0.01
+      min_entropy: 0.0001
+      scheduler_type: linear_entropy
+      total_steps: 3000
+    exploration_method:
+      kwargs: {}
+      name: distribution
+    gamma: 0.99
+    lambda_: 0.95
+    num_epochs: 6
+    optimizer_kwargs:
+      actor_lr: 0.0003
+      core_lr: 0.0001
+      critic_lr: 0.001
+    scheduler_kwargs:
+      T_max: 5000
+      scheduler_type: cosine_annealing_lr
+    use_value_clipping: absolute
+    value_loss_coef: 0.5
+  type: ppo
+train_kwargs:
+  batch_size: 2048
+  minibatch_size: 256
+  num_steps: 10000000
+worker_kwargs:
+  device: auto
+  record_step: 500000
+  temperature_config: {}
+  verbose: 1

@@ -5,7 +5,83 @@ env_kwargs:
   normalize_rewards: false
   num_envs: 8
   permute_observations: false
-  training_wrappers: {}
+  training_wrappers:
+    action_reward:
+      abs_factors:
+      - 0.002
+      - 0.001
+      - 0.002
+      - 0.001
+      pow_factors:
+      - -0.001
+      - -0.002
+      - -0.01
+      - -0.002
+    clip_reward:
+      min_reward: -50.0
+    no_movement_truncate:
+      eps: 0.01
+      index: 2
+      penalty: 2.0
+    observations_interaction:
+      factors:
+        (5, 10): -0.2
+    power_obs_reward:
+      abs_factors:
+      - -0.01
+      - -0.005
+      - 0.0
+      - -0.002
+      - -0.001
+      - 0.001
+      - 0
+      - 0
+      - 0
+      - -0.001
+      - 0.001
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      nominal_factors:
+      - 0.0
+      - 0.0
+      - 0.02
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0
+      - 0
+      - 0.001
+      - 0.0
+      - 0.0
+      - 0
+      - 0
+      - 0.001
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    scale_reward:
+      loc_factor: 0.0
+      scale_factor: 0.2
+    terminal_bonus:
+      truncated_bonus: -1.0
   vectorization_mode: async
 env_name: BipedalWalkerHardcore
 experiment_name: PPO/v3
@@ -35,7 +111,7 @@ policy:
       name: distribution
     gamma: 0.99
     lambda_: 0.95
-    num_epochs: 6
+    num_epochs: 4
     optimizer_kwargs:
       actor_lr: 0.0003
       critic_lr: 0.0005

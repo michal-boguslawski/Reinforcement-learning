@@ -136,6 +136,8 @@ class PPOPolicy(OnPolicy, EntropyMixin):
         lr = optimizer_kwargs.get("lr")
         actor_lr = optimizer_kwargs.get("actor_lr") or lr
         critic_lr = optimizer_kwargs.get("critic_lr") or lr
+        core_lr = optimizer_kwargs.get("core_lr") or optimizer_kwargs.get("critic_lr") or lr
+        log_std_lr = optimizer_kwargs.get("log_std_lr") or optimizer_kwargs.get("actor_lr") or lr
 
         if not (
             isinstance(self.network.head, ActorCriticHead)
@@ -148,7 +150,7 @@ class PPOPolicy(OnPolicy, EntropyMixin):
             {"params": self.network.head.actor.parameters(), "lr": actor_lr},
             {"params": self.network.head.critic.parameters(), "lr": critic_lr},
             {"params": self.network.backbone.parameters(), "lr": critic_lr},
-            {"params": self.network.core.parameters(), "lr": critic_lr},
-            {"params": [self.network.log_std], "lr": actor_lr},
-            {"params": [self.network.raw_scale_tril], "lr": actor_lr},
+            {"params": self.network.core.parameters(), "lr": core_lr},
+            {"params": [self.network.log_std], "lr": log_std_lr},
+            {"params": [self.network.raw_scale_tril], "lr": log_std_lr},
         ]
