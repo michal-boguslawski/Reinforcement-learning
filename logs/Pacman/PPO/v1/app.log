@@ -1,0 +1,5 @@
+2026-03-20 19:38:45,315 : worker.worker : INFO : Current device cuda
+2026-03-20 19:38:47,149 : worker.worker : INFO : ==================== Start training ====================
+2026-03-20 19:38:47,824 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
+2026-03-20 19:38:52,731 : evaluate.evaluate : INFO : Evaluation results: mean = 36.00, std = 0.00, min = 36.00, max = 36.00, count = 1
+2026-03-20 19:38:52,732 : evaluate.evaluate : INFO : Evaluation lengths: mean = 904.00, std = 0.00, min = 904.00, max = 904.00, count = 1

@@ -1,6 +1,8 @@
 import os
 import shutil
 import torch as T
+import gymnasium as gym
+import ale_py
 
 from config.config import ExperimentConfig
 from config.logging import setup_logger
@@ -8,6 +10,7 @@ from worker.worker import Worker
 
 
 os.environ["MUJOCO_GL"] = "egl" if T.cuda.is_available() else "osmesa"
+gym.register_envs(ale_py)
 
 
 if __name__ == "__main__":

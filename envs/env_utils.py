@@ -6,6 +6,8 @@ def prepare_wrappers(config: dict | None) -> list:
     if config:
         for wrapper_name, wrapper_kwargs in config.items():
             wrapper = WRAPPERS.get(wrapper_name, None)
+            if wrapper_name == "resize_observation":
+                wrapper_kwargs["shape"] = (wrapper_kwargs["shape"], wrapper_kwargs["shape"])
             if wrapper is None:
                 raise ValueError(f"Unknown wrapper '{wrapper_name}'")
             wrappers.append(lambda env, w=wrapper, kw=wrapper_kwargs: w(env=env, **kw))
