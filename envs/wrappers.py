@@ -153,13 +153,29 @@ class ActionPowerRewardWrapper(gym.Wrapper):
         self.decay_factor = decay_factor or 1
         logger.info(f"ActionPowerRewardWrapper attached with params {pow_factors} {abs_factors} {decay_factor}")
 
+    def _transform_reward_continuous_action(self, action) -> float:
+        transformed_reward = 0
+        if self.pow_factors is not None:
+            transformed_reward += (action ** 2 * self.pow_factors).sum().item() * self.decay
+        if self.abs_factors is not None:
+            transformed_reward += (np.abs(action) * self.abs_factors).sum().item() * self.decay
+        return transformed_reward
+
+    def _transform_reward_discrete_action(self, action) -> float:
+        transformed_reward = 0
+        if self.abs_factors is not None:
+            transformed_reward += self.abs_factors[action] * self.decay
+        return transformed_reward
+
     def step(self, action):
         obs, reward, terminated, truncated, info = self.env.step(action)
         reward = float(reward)
-        if self.pow_factors is not None:
-            reward += (action ** 2 * self.pow_factors).sum().item() * self.decay
-        if self.abs_factors is not None:
-            reward += (np.abs(action) * self.abs_factors).sum().item() * self.decay
+        if isinstance(action, int) or action.dtype == np.int_:
+            transformed_reward = self._transform_reward_discrete_action(action)
+            reward += transformed_reward
+        else:
+            transformed_reward = self._transform_reward_continuous_action(action)
+            reward += transformed_reward
         if terminated:
             self.decay *= self.decay_factor
         

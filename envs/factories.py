@@ -18,13 +18,13 @@ def make_vec(
     general_wrappers: dict | None = None,
     normalize_rewards: bool = False,
     normalize_gamma: float = 0.99,
-    permute_observations: bool = False,
+    # permute_observations: bool = False,
     verbose: int = 0,
     *args,
     **kwargs
 ) -> gym.vector.VectorEnv:
     wrappers = []
-    wrappers.append(lambda env: DtypeObservation(env, np.float32))
+    # wrappers.append(lambda env: DtypeObservation(env, np.float32))
 
     if ( not training ) or ( verbose == 1 ):
         wrappers.append(lambda env: RecordEpisodeStatistics(env))
@@ -44,8 +44,8 @@ def make_vec(
 
     wrappers.extend(prepare_wrappers(general_wrappers))
 
-    if permute_observations:
-        wrappers.append(WRAPPERS["permute_observations"])
+    # if permute_observations:
+    #     wrappers.append(WRAPPERS["permute_observations"])
 
     if num_envs <= 0:
         raise ValueError(f"num_envs must be positive, got {num_envs}")

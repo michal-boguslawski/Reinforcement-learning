@@ -1,13 +1,19 @@
 env_kwargs:
   general_wrappers:
-    rescale_observation:
-      max_obs: 1.0
-      min_obs: -1.0
+    atari_preprocessing:
+      frame_skip: 1
+      grayscale_obs: false
+      screen_size: 128
+      terminal_on_life_loss: true
+    terminal_bonus:
+      terminated_bonus: -5
   id: ALE/Pacman-v5
   normalize_rewards: false
-  num_envs: 4
-  permute_observations: true
-  training_wrappers: {}
+  num_envs: 8
+  training_wrappers:
+    scale_reward:
+      loc_factor: 0.01
+      scale_factor: 0.5
   vectorization_mode: async
 env_name: Pacman
 experiment_name: PPO/v1
@@ -52,10 +58,9 @@ policy:
       name: distribution
     gamma: 0.99
     lambda_: 0.95
-    num_epochs: 6
+    num_epochs: 4
     optimizer_kwargs:
       actor_lr: 0.0003
-      core_lr: 5.0e-05
       critic_lr: 0.0005
       log_std_lr: 5.0e-05
     scheduler_kwargs:
@@ -65,7 +70,7 @@ policy:
     value_loss_coef: 0.5
   type: ppo
 train_kwargs:
-  batch_size: 1024
+  batch_size: 512
   minibatch_size: 128
   num_steps: 1000000
 worker_kwargs:

@@ -13,7 +13,8 @@ class EnvConfig(BaseModel):
     training_wrappers: dict = Field(default_factory=dict)
     general_wrappers: dict = Field(default_factory=dict)
     normalize_rewards: bool = False
-    permute_observations: bool = False
+    terminal_on_life_loss: bool | None = None
+    # permute_observations: bool = False
 
 
 class ExplorationMethod(BaseModel):

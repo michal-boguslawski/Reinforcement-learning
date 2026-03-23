@@ -5,8 +5,12 @@ from .base import ActionBaseDistribution
 
 
 class CategoricalDistribution(ActionBaseDistribution):
-    def __init__(self, *args, **kwargs):
+    def __init__(*args, **kwargs):
         pass
 
     def __call__(self, logits: T.Tensor, temperature: float = 1.0) -> Distribution:
-        return Categorical(logits=logits / temperature)
+        # Apply temperature
+        logits = logits / temperature ** ( 1/2 )
+        # Stabilize by subtracting max
+        logits = logits - logits.max()
+        return Categorical(logits=logits)

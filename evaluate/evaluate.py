@@ -50,9 +50,10 @@ class Evaluator:
             record=self.record,
             video_folder=self.video_folder,
             name_prefix="eval",
-            training_wrappers=self.training_wrappers,
+            training_wrappers=None,
             general_wrappers=self.general_wrappers,
             vectorization_mode=self.vectorization_mode,
+            # verbose=1,
             *args,
             **kwargs
         )
@@ -78,6 +79,7 @@ class Evaluator:
         )
 
         if action_output is not None:
+            logger.debug(f"Action logits: {action_output.logits}")
             dist = getattr(action_output, "dist")
             if dist:
                 try:
@@ -115,10 +117,10 @@ class Evaluator:
 
             if tmp_finished_envs:
                 tq.update(tmp_finished_envs)
-                tmp_rewards = info.get("episode", {}).get("r")
+                tmp_rewards = T.tensor(self.envs.env.call("episode_returns"))  # info.get("episode", {}).get("r")
                 rewards.extend(tmp_rewards[done].cpu().numpy().tolist())
 
-                tmp_lengths = info.get("episode", {}).get("l")
+                tmp_lengths = T.tensor(self.envs.env.call("episode_lengths"))  # info.get("episode", {}).get("l")
                 lengths.extend(tmp_lengths[done].cpu().numpy().tolist())
                 logger.debug({
                     "evaluation/episode_reward": tmp_rewards[done].cpu().mean().item(),

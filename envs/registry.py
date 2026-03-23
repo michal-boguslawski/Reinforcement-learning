@@ -1,6 +1,6 @@
 
 from gymnasium.wrappers import RecordVideo, TransformReward, ClipAction, RescaleObservation, TimeLimit, ClipReward, \
-    ResizeObservation
+    ResizeObservation, AtariPreprocessing
 from typing import Callable, Dict
 
 from .wrappers import TerminalBonusWrapper, PowerObsRewardWrapper, ActionPowerRewardWrapper, ActionInteractionWrapper, \
@@ -24,4 +24,5 @@ WRAPPERS: Dict[str, Callable] = {
     "no_movement_truncate": NoMovementTruncateWrapper,
     "observations_interaction": ObservationsInteractionWrapper,
     "clip_reward": ClipReward,
+    "atari_preprocessing": AtariPreprocessing
 }

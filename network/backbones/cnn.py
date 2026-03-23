@@ -1,5 +1,6 @@
 import torch as T
 import torch.nn as nn
+from torchvision.transforms import functional as F
 
 from ..models.models import Features
 from ..torch_registry import ACTIVATION_FUNCTIONS
@@ -15,7 +16,7 @@ class SimpleCNN(nn.Module):
         self.activation = ACTIVATION_FUNCTIONS[activation_fn]
 
         self.network = nn.Sequential(
-            nn.Conv2d(input_shape[0], 6, 8, 4, 0),
+            nn.Conv2d(input_shape[-1], 6, 8, 4, 0),
             self.activation(),
             nn.Conv2d(6, 16, 4, 4),
             self.activation(),
@@ -25,7 +26,8 @@ class SimpleCNN(nn.Module):
         )
 
     def forward(self, input_tensor: T.Tensor) -> Features:
-        features = self.network(input_tensor)
+        transformed_tensor = F.convert_image_dtype(input_tensor.permute(0, 3, 1, 2), T.float32)
+        features = self.network(transformed_tensor)
         return Features(features=features)
 
 
@@ -53,7 +55,7 @@ class CNN(nn.Module):
 
     def _build_network(self):
         dims = self.dims
-        dims.insert(0, self.input_shape[0])
+        dims.insert(0, self.input_shape[-1])
 
         layers = []
         for i in range(len(dims) - 1):
@@ -77,6 +79,7 @@ class CNN(nn.Module):
         )
 
     def forward(self, input_tensor: T.Tensor) -> Features:
-        features = self.network(input_tensor)
+        transformed_tensor = F.convert_image_dtype(input_tensor.permute(0, 3, 1, 2), T.float32)
+        features = self.network(transformed_tensor)
         features = self.fc(features)
         return Features(features=features)

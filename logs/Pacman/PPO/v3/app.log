@@ -1,0 +1,90 @@
+2026-03-23 08:05:53,622 : worker.worker : INFO : Current device cuda
+2026-03-23 08:05:53,806 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.5, 0, 0, 0, 0] 1
+2026-03-23 08:05:54,033 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:05:54,258 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.5, 0, 0, 0, 0] 1
+2026-03-23 08:05:54,259 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:05:54,264 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.5, 0, 0, 0, 0] 1
+2026-03-23 08:05:54,265 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:05:54,268 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.5, 0, 0, 0, 0] 1
+2026-03-23 08:05:54,269 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:05:54,273 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.5, 0, 0, 0, 0] 1
+2026-03-23 08:05:54,274 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:05:54,283 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.5, 0, 0, 0, 0] 1
+2026-03-23 08:05:54,284 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:05:54,288 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.5, 0, 0, 0, 0] 1
+2026-03-23 08:05:54,289 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:05:54,289 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.5, 0, 0, 0, 0] 1
+2026-03-23 08:05:54,290 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:05:54,295 : envs.wrappers : INFO : ActionPowerRewardWrapper attached with params None [-0.5, 0, 0, 0, 0] 1
+2026-03-23 08:05:54,296 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:05:54,570 : worker.worker : INFO : ==================== Start training ====================
+2026-03-23 08:05:55,192 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 08:05:55,827 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:05:56,044 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:05:56,594 : evaluate.evaluate : INFO : Evaluation results: mean = 1.00, std = 0.00, min = 1.00, max = 1.00, count = 1
+2026-03-23 08:05:56,594 : evaluate.evaluate : INFO : Evaluation lengths: mean = 120.00, std = 0.00, min = 120.00, max = 120.00, count = 1
+2026-03-23 08:05:56,631 : evaluate.evaluate : DEBUG : Action logits: tensor([[ 0.0600, -0.0629, -0.0202, -0.0176,  0.0134]], device='cuda:0',
+       dtype=torch.float16)
+2026-03-23 08:21:40,308 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 08:21:40,492 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:21:40,719 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:21:41,092 : evaluate.evaluate : INFO : Evaluation results: mean = 3.00, std = 0.00, min = 3.00, max = 3.00, count = 1
+2026-03-23 08:21:41,092 : evaluate.evaluate : INFO : Evaluation lengths: mean = 84.00, std = 0.00, min = 84.00, max = 84.00, count = 1
+2026-03-23 08:21:41,094 : evaluate.evaluate : DEBUG : Action logits: tensor([[-0.7446,  0.1396,  0.7944, -0.2458,  0.4250]], device='cuda:0',
+       dtype=torch.float16)
+2026-03-23 08:37:27,375 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 08:37:27,559 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:37:27,775 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:37:28,165 : evaluate.evaluate : INFO : Evaluation results: mean = 3.00, std = 0.00, min = 3.00, max = 3.00, count = 1
+2026-03-23 08:37:28,166 : evaluate.evaluate : INFO : Evaluation lengths: mean = 84.00, std = 0.00, min = 84.00, max = 84.00, count = 1
+2026-03-23 08:37:28,168 : evaluate.evaluate : DEBUG : Action logits: tensor([[-0.7026,  0.2035,  0.6890, -0.2966,  0.3452]], device='cuda:0',
+       dtype=torch.float16)
+2026-03-23 08:53:59,880 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 08:54:00,063 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:54:00,299 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 08:54:00,707 : evaluate.evaluate : INFO : Evaluation results: mean = 3.00, std = 0.00, min = 3.00, max = 3.00, count = 1
+2026-03-23 08:54:00,708 : evaluate.evaluate : INFO : Evaluation lengths: mean = 84.00, std = 0.00, min = 84.00, max = 84.00, count = 1
+2026-03-23 08:54:00,711 : evaluate.evaluate : DEBUG : Action logits: tensor([[-0.5708,  0.0224,  0.6104, -0.1932,  0.3525]], device='cuda:0',
+       dtype=torch.float16)
+2026-03-23 09:11:48,409 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 09:11:48,597 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 09:11:48,823 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 09:11:49,245 : evaluate.evaluate : INFO : Evaluation results: mean = 3.00, std = 0.00, min = 3.00, max = 3.00, count = 1
+2026-03-23 09:11:49,245 : evaluate.evaluate : INFO : Evaluation lengths: mean = 84.00, std = 0.00, min = 84.00, max = 84.00, count = 1
+2026-03-23 09:11:49,248 : evaluate.evaluate : DEBUG : Action logits: tensor([[-0.6147,  0.2151,  0.6455, -0.3472,  0.4587]], device='cuda:0',
+       dtype=torch.float16)
+2026-03-23 09:29:34,653 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 09:29:34,835 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 09:29:35,056 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 09:29:35,471 : evaluate.evaluate : INFO : Evaluation results: mean = 3.00, std = 0.00, min = 3.00, max = 3.00, count = 1
+2026-03-23 09:29:35,472 : evaluate.evaluate : INFO : Evaluation lengths: mean = 84.00, std = 0.00, min = 84.00, max = 84.00, count = 1
+2026-03-23 09:29:35,474 : evaluate.evaluate : DEBUG : Action logits: tensor([[-3.6865e-01,  7.6962e-04,  1.0342e+00, -2.9980e-01,  3.4741e-01]],
+       device='cuda:0', dtype=torch.float16)
+2026-03-23 09:46:37,556 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 09:46:37,756 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 09:46:37,979 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 09:46:38,291 : evaluate.evaluate : INFO : Evaluation results: mean = 3.00, std = 0.00, min = 3.00, max = 3.00, count = 1
+2026-03-23 09:46:38,291 : evaluate.evaluate : INFO : Evaluation lengths: mean = 84.00, std = 0.00, min = 84.00, max = 84.00, count = 1
+2026-03-23 09:46:38,293 : evaluate.evaluate : DEBUG : Action logits: tensor([[-0.3044, -0.1592,  0.7031, -0.2871,  0.4990]], device='cuda:0',
+       dtype=torch.float16)
+2026-03-23 10:03:07,633 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 10:03:07,815 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 10:03:08,035 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 10:03:08,355 : evaluate.evaluate : INFO : Evaluation results: mean = 3.00, std = 0.00, min = 3.00, max = 3.00, count = 1
+2026-03-23 10:03:08,355 : evaluate.evaluate : INFO : Evaluation lengths: mean = 84.00, std = 0.00, min = 84.00, max = 84.00, count = 1
+2026-03-23 10:03:08,357 : evaluate.evaluate : DEBUG : Action logits: tensor([[-0.1921, -0.0767,  0.5605, -0.4326,  0.3916]], device='cuda:0',
+       dtype=torch.float16)
+2026-03-23 10:20:15,193 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 10:20:15,375 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 10:20:15,596 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 10:20:15,940 : evaluate.evaluate : INFO : Evaluation results: mean = 3.00, std = 0.00, min = 3.00, max = 3.00, count = 1
+2026-03-23 10:20:15,940 : evaluate.evaluate : INFO : Evaluation lengths: mean = 84.00, std = 0.00, min = 84.00, max = 84.00, count = 1
+2026-03-23 10:20:15,942 : evaluate.evaluate : DEBUG : Action logits: tensor([[-0.0841, -0.1196,  0.5640, -0.4824,  0.5005]], device='cuda:0',
+       dtype=torch.float16)
+2026-03-23 10:37:16,489 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 10:37:16,670 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 10:37:16,890 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 10:37:17,402 : evaluate.evaluate : INFO : Evaluation results: mean = 4.00, std = 0.00, min = 4.00, max = 4.00, count = 1
+2026-03-23 10:37:17,402 : evaluate.evaluate : INFO : Evaluation lengths: mean = 91.00, std = 0.00, min = 91.00, max = 91.00, count = 1
+2026-03-23 10:37:17,405 : evaluate.evaluate : DEBUG : Action logits: tensor([[-0.2335,  0.0428, -0.0374, -0.0878,  0.6611]], device='cuda:0',
+       dtype=torch.float16)

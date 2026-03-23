@@ -1,5 +1,78 @@
-2026-03-20 19:38:45,315 : worker.worker : INFO : Current device cuda
-2026-03-20 19:38:47,149 : worker.worker : INFO : ==================== Start training ====================
-2026-03-20 19:38:47,824 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
-2026-03-20 19:38:52,731 : evaluate.evaluate : INFO : Evaluation results: mean = 36.00, std = 0.00, min = 36.00, max = 36.00, count = 1
-2026-03-20 19:38:52,732 : evaluate.evaluate : INFO : Evaluation lengths: mean = 904.00, std = 0.00, min = 904.00, max = 904.00, count = 1
+2026-03-20 22:04:22,886 : worker.worker : INFO : Current device cuda
+2026-03-20 22:04:23,233 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:04:23,446 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:04:23,455 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:04:23,462 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:04:23,470 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:04:23,474 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:04:23,478 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:04:23,489 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:04:23,490 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:04:23,758 : worker.worker : INFO : ==================== Start training ====================
+2026-03-20 22:04:24,387 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
+2026-03-20 22:04:25,037 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:04:25,255 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:04:25,717 : evaluate.evaluate : INFO : Evaluation results: mean = 2.00, std = 0.00, min = 2.00, max = 2.00, count = 1
+2026-03-20 22:04:25,717 : evaluate.evaluate : INFO : Evaluation lengths: mean = 98.00, std = 0.00, min = 98.00, max = 98.00, count = 1
+2026-03-20 22:21:29,480 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
+2026-03-20 22:21:29,664 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:21:29,880 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:21:30,264 : evaluate.evaluate : INFO : Evaluation results: mean = 2.00, std = 0.00, min = 2.00, max = 2.00, count = 1
+2026-03-20 22:21:30,264 : evaluate.evaluate : INFO : Evaluation lengths: mean = 98.00, std = 0.00, min = 98.00, max = 98.00, count = 1
+2026-03-20 22:39:15,898 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
+2026-03-20 22:39:16,083 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:39:16,304 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:39:16,616 : evaluate.evaluate : INFO : Evaluation results: mean = 3.00, std = 0.00, min = 3.00, max = 3.00, count = 1
+2026-03-20 22:39:16,616 : evaluate.evaluate : INFO : Evaluation lengths: mean = 84.00, std = 0.00, min = 84.00, max = 84.00, count = 1
+2026-03-20 22:57:40,209 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
+2026-03-20 22:57:40,410 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:57:40,636 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 22:57:40,984 : evaluate.evaluate : INFO : Evaluation results: mean = 3.00, std = 0.00, min = 3.00, max = 3.00, count = 1
+2026-03-20 22:57:40,985 : evaluate.evaluate : INFO : Evaluation lengths: mean = 84.00, std = 0.00, min = 84.00, max = 84.00, count = 1
+2026-03-20 23:16:08,324 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
+2026-03-20 23:16:08,526 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 23:16:08,749 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 23:16:09,153 : evaluate.evaluate : INFO : Evaluation results: mean = 2.00, std = 0.00, min = 2.00, max = 2.00, count = 1
+2026-03-20 23:16:09,153 : evaluate.evaluate : INFO : Evaluation lengths: mean = 98.00, std = 0.00, min = 98.00, max = 98.00, count = 1
+2026-03-20 23:34:22,342 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
+2026-03-20 23:34:22,525 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 23:34:22,752 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 23:34:23,266 : evaluate.evaluate : INFO : Evaluation results: mean = 1.00, std = 0.00, min = 1.00, max = 1.00, count = 1
+2026-03-20 23:34:23,267 : evaluate.evaluate : INFO : Evaluation lengths: mean = 120.00, std = 0.00, min = 120.00, max = 120.00, count = 1
+2026-03-20 23:51:55,107 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
+2026-03-20 23:51:55,309 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 23:51:55,533 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-20 23:51:56,026 : evaluate.evaluate : INFO : Evaluation results: mean = 1.00, std = 0.00, min = 1.00, max = 1.00, count = 1
+2026-03-20 23:51:56,026 : evaluate.evaluate : INFO : Evaluation lengths: mean = 120.00, std = 0.00, min = 120.00, max = 120.00, count = 1
+2026-03-21 00:08:53,813 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
+2026-03-21 00:08:54,014 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 00:08:54,241 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 00:08:54,684 : evaluate.evaluate : INFO : Evaluation results: mean = 2.00, std = 0.00, min = 2.00, max = 2.00, count = 1
+2026-03-21 00:08:54,684 : evaluate.evaluate : INFO : Evaluation lengths: mean = 98.00, std = 0.00, min = 98.00, max = 98.00, count = 1
+2026-03-21 00:26:02,853 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
+2026-03-21 00:26:03,038 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 00:26:03,263 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 00:26:03,672 : evaluate.evaluate : INFO : Evaluation results: mean = 2.00, std = 0.00, min = 2.00, max = 2.00, count = 1
+2026-03-21 00:26:03,672 : evaluate.evaluate : INFO : Evaluation lengths: mean = 98.00, std = 0.00, min = 98.00, max = 98.00, count = 1
+2026-03-21 00:43:02,726 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
+2026-03-21 00:43:02,909 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 00:43:03,158 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 00:43:03,541 : evaluate.evaluate : INFO : Evaluation results: mean = 2.00, std = 0.00, min = 2.00, max = 2.00, count = 1
+2026-03-21 00:43:03,541 : evaluate.evaluate : INFO : Evaluation lengths: mean = 98.00, std = 0.00, min = 98.00, max = 98.00, count = 1
+2026-03-21 01:00:05,940 : network.model : INFO : Saved model to logs/Pacman/PPO/v1/model.pt
+2026-03-21 01:00:06,122 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 01:00:06,345 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 01:00:06,756 : evaluate.evaluate : INFO : Evaluation results: mean = 2.00, std = 0.00, min = 2.00, max = 2.00, count = 1
+2026-03-21 01:00:06,757 : evaluate.evaluate : INFO : Evaluation lengths: mean = 98.00, std = 0.00, min = 98.00, max = 98.00, count = 1
+2026-03-21 01:00:07,224 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 01:00:07,449 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 01:00:07,487 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 01:00:07,503 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 01:00:07,542 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 01:00:07,563 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 01:00:07,605 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 01:00:07,634 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 01:00:07,649 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -5 0.0
+2026-03-21 01:01:31,881 : evaluate.evaluate : INFO : Evaluation results: mean = 2.00, std = 0.00, min = 2.00, max = 2.00, count = 1001
+2026-03-21 01:01:31,881 : evaluate.evaluate : INFO : Evaluation lengths: mean = 98.00, std = 0.00, min = 98.00, max = 98.00, count = 1001
+2026-03-21 01:01:31,942 : worker.worker : INFO : ==================== End training ====================
