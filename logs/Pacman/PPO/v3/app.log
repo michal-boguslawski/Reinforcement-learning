@@ -88,3 +88,24 @@
 2026-03-23 10:37:17,402 : evaluate.evaluate : INFO : Evaluation lengths: mean = 91.00, std = 0.00, min = 91.00, max = 91.00, count = 1
 2026-03-23 10:37:17,405 : evaluate.evaluate : DEBUG : Action logits: tensor([[-0.2335,  0.0428, -0.0374, -0.0878,  0.6611]], device='cuda:0',
        dtype=torch.float16)
+2026-03-23 10:53:15,357 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 10:53:15,539 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 10:53:15,760 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 10:53:16,393 : evaluate.evaluate : INFO : Evaluation results: mean = 1.00, std = 0.00, min = 1.00, max = 1.00, count = 1
+2026-03-23 10:53:16,394 : evaluate.evaluate : INFO : Evaluation lengths: mean = 120.00, std = 0.00, min = 120.00, max = 120.00, count = 1
+2026-03-23 10:53:16,396 : evaluate.evaluate : DEBUG : Action logits: tensor([[-0.1355, -0.2378, -0.3394,  0.5854,  0.6851]], device='cuda:0',
+       dtype=torch.float16)
+2026-03-23 11:08:17,192 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 11:08:17,375 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 11:08:17,594 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 11:08:18,251 : evaluate.evaluate : INFO : Evaluation results: mean = 6.00, std = 0.00, min = 6.00, max = 6.00, count = 1
+2026-03-23 11:08:18,251 : evaluate.evaluate : INFO : Evaluation lengths: mean = 122.00, std = 0.00, min = 122.00, max = 122.00, count = 1
+2026-03-23 11:08:18,253 : evaluate.evaluate : DEBUG : Action logits: tensor([[-0.1801,  0.0992, -0.3701,  0.4861,  0.5103]], device='cuda:0',
+       dtype=torch.float16)
+2026-03-23 11:23:49,585 : network.model : INFO : Saved model to logs/Pacman/PPO/v3/model.pt
+2026-03-23 11:23:49,796 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 11:23:50,024 : envs.wrappers : INFO : TerminalBonusWrapper attached with params -1 0.0
+2026-03-23 11:23:50,566 : evaluate.evaluate : INFO : Evaluation results: mean = 6.00, std = 0.00, min = 6.00, max = 6.00, count = 1
+2026-03-23 11:23:50,566 : evaluate.evaluate : INFO : Evaluation lengths: mean = 122.00, std = 0.00, min = 122.00, max = 122.00, count = 1
+2026-03-23 11:23:50,568 : evaluate.evaluate : DEBUG : Action logits: tensor([[-0.0699, -0.2025, -0.3232,  0.5176,  0.6006]], device='cuda:0',
+       dtype=torch.float16)
